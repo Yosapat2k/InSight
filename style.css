@@ -408,8 +408,8 @@ section p {
 }
 
 .rowDisplay:hover {
-    filter: url('emulator/filters.svg#deuteranopia');
-    -webkit-filter: url('emulator/filters.svg#deuteranopia');
+    filter: url('./emulator/filters.svg#deuteranopia');
+    -webkit-filter: url('./emulator/filters.svg#deuteranopia');
     transition: filter 600ms ease-in-out;
 }
 
@@ -422,8 +422,8 @@ section p {
 }
 
 .rowDisplay2:hover {
-    filter: url('emulator/filters.svg#deuteranopia');
-    -webkit-filter: url('emulator/filters.svg#deuteranopia');
+    filter: url('./emulator/filters.svg#deuteranopia');
+    -webkit-filter: url('./emulator/filters.svg#deuteranopia');
     transition: filter 600ms ease-in-out;
 }
 
