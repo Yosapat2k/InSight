@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="main.js"></script> 
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55"><path class="cls-1" d="M7.49,11.66l20.2,15.7L7.49,43.05V11.66m-5-10.22V53.27L35.84,27.36,2.49,1.44Z"/><polygon class="cls-1" points="7.19 18.28 18.87 27.35 7.19 36.43 7.19 18.28"/><path class="cls-1" d="M24.16,12l20.2,15.69-20.2,15.7V12m-5-10.22V53.56L52.51,27.64,19.16,1.73Z"/><polygon class="cls-1" points="23.86 18.57 35.55 27.64 23.86 36.72 23.86 18.57"/></svg>
+                    <span class="link-text">MATTE</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.48 99.48">
+                        <polygon class="cls-2" points="70.97 25.74 70.97 33.12 81.13 33.12 81.13 32.65 81.13 22.98 70.97 22.98 70.97 25.74"/>
+                        <path class="cls-1" d="M3.71,49.73s18.86,29.41,46,29.41A44.22,44.22,0,0,0,67,75.62V23.85a44.22,44.22,0,0,0-17.24-3.52C20.23,20.33,3.71,49.73,3.71,49.73Zm62.11,0A16.09,16.09,0,1,1,49.73,33.65,16.08,16.08,0,0,1,65.82,49.73Z"/>
+                        <path class="cls-1" d="M85.13,36.31V63.15A68.09,68.09,0,0,0,95.76,49.73,68.09,68.09,0,0,0,85.13,36.31Z"/>
+                        <polygon class="cls-2" points="70.97 73.73 70.97 78.24 81.13 78.24 81.13 66.82 81.13 40.11 70.97 40.11 70.97 73.73"/>
+                        <path class="cls-2" d="M46.41,48.61a4.1,4.1,0,0,1-2.91-1.18,6.25,6.25,0,0,0-.42,2.29,6.66,6.66,0,1,0,7.27-6.62,4,4,0,0,1,.23,1.34A4.17,4.17,0,0,1,46.41,48.61Z"/>
+                    </svg>
+                    <span class="link-text">ข้อมูลตาบอดสี</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.48 99.48">
+                        <path class="cls-1" d="M49.73,20.33c-.41,0-.82,0-1.23,0h0c-.2,0-.39,0-.59,0-.55,0-1.09.05-1.63.1l-1,.09c-.55.05-1.1.12-1.65.19l-.89.14c-.56.09-1.11.19-1.66.3l-.81.17-1.67.4-.72.2c-.56.16-1.12.32-1.67.5l-.63.21c-.57.2-1.14.4-1.69.61l-.54.21c-.57.23-1.14.46-1.7.71l-.45.2c-.57.26-1.14.53-1.7.81l-.36.19c-.58.29-1.15.59-1.72.91l-.27.15c-.58.33-1.16.67-1.72,1l-.18.11c-.58.36-1.16.74-1.73,1.12l-.08.06A69.83,69.83,0,0,0,3.71,49.73,78.72,78.72,0,0,0,12,60l.07.07c.36.39.74.77,1.12,1.16l.18.19,1.1,1.07.29.29,1.07,1,.4.37,1.05.94.5.44,1,.88.58.49,1,.82.67.53,1,.76c.24.19.49.37.75.55s.67.48,1,.71l.82.57,1,.66.89.56,1,.61,1,.55,1,.55,1,.54,1,.5,1.09.5,1,.44,1.14.47,1,.38c.39.15.79.29,1.19.42l1,.33,1.25.36,1,.26q.64.17,1.29.3l1.07.2c.44.08.88.16,1.33.22l1.08.14,1.36.14,1.1.07.72,0v0c.41,0,.82,0,1.23,0,29.51,0,46-29.41,46-29.41S79.24,20.33,49.73,20.33ZM48.31,65.74c-.27,0-.53-.06-.79-.1l-.78-.11c-.26,0-.51-.11-.77-.18l-.74-.19c-.25-.07-.5-.16-.75-.24s-.47-.16-.7-.26l-.73-.31L42.4,64c-.24-.12-.47-.25-.7-.38l-.6-.37c-.23-.14-.46-.3-.68-.45l-.54-.41-.65-.53c-.17-.14-.33-.29-.49-.44s-.41-.39-.6-.6-.29-.31-.43-.47-.39-.44-.57-.66l-.36-.49c-.18-.25-.36-.49-.52-.74s-.21-.33-.31-.5-.31-.53-.46-.81l-.24-.5c-.14-.29-.28-.58-.4-.88s-.12-.32-.18-.48c-.12-.32-.24-.64-.33-1-.05-.13-.07-.28-.11-.42-.1-.36-.2-.72-.27-1.08a1.87,1.87,0,0,0,0-.25,16.9,16.9,0,0,1-.26-2.86,15.76,15.76,0,0,1,.28-2.94,1,1,0,0,1,0-.17c.08-.39.18-.78.29-1.17,0-.11,0-.22.08-.33.11-.36.24-.71.37-1.05,0-.13.09-.27.14-.39.14-.33.29-.65.44-1,.07-.14.13-.28.2-.41.16-.31.33-.6.51-.89s.16-.28.25-.41c.18-.29.38-.56.58-.83l.3-.4c.2-.25.42-.5.64-.75l.34-.38c.23-.23.46-.46.7-.68l.39-.36c.24-.21.49-.41.74-.6l.44-.33.78-.53c.16-.1.32-.2.49-.29s.54-.31.82-.45l.52-.25c.28-.13.57-.26.86-.37s.37-.14.55-.21l.9-.29.58-.15c.3-.07.61-.15.93-.21l.59-.09c.32,0,.64-.09,1-.12s.91-.07,1.37-.07a16.08,16.08,0,1,1,0,32.16C49.25,65.81,48.78,65.78,48.31,65.74Zm1.42,9.4c-.41,0-.82,0-1.23,0V69.75c.41,0,.82.06,1.23.06a20.08,20.08,0,1,0,0-40.16c-.41,0-.82,0-1.23.07V24.37c.41,0,.82,0,1.23,0,22.49,0,37.12,19.14,41.31,25.4C86.85,56,72.21,75.14,49.73,75.14Z"/>
+                        <path class="cls-2" d="M56.39,49.72a6.66,6.66,0,1,1-13.31,0,6.25,6.25,0,0,1,.42-2.29,4.1,4.1,0,0,0,2.91,1.18,4.17,4.17,0,0,0,4.17-4.17,4,4,0,0,0-.23-1.34A6.65,6.65,0,0,1,56.39,49.72Z"/></svg>
+                    <span class="link-text">ความลำบาก</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.48 99.48">
+                        <rect class="cls-1" x="21.41" y="21.41" width="6" height="6"/>
+                        <rect class="cls-1" x="42.3" y="21.41" width="14.89" height="6"/>
+                        <rect class="cls-1" x="72.08" y="21.41" width="6" height="6"/>
+                        <rect class="cls-1" x="21.41" y="42.3" width="6" height="14.89"/>
+                        <rect class="cls-1" x="72.08" y="42.3" width="6" height="14.89"/>
+                        <rect class="cls-1" x="42.3" y="72.08" width="14.89" height="6"/>
+                        <rect class="cls-1" x="21.41" y="72.08" width="6" height="6"/>
+                        <polygon class="cls-1" points="68.08 38.3 68.08 61.19 78.08 61.19 78.08 68.08 68.08 68.08 68.08 78.08 61.19 78.08 61.19 68.08 38.3 68.08 38.3 78.08 31.41 78.08 31.41 68.08 21.41 68.08 21.41 61.19 31.41 61.19 31.41 38.3 21.41 38.3 21.41 31.41 31.41 31.41 31.41 21.41 38.3 21.41 38.3 31.41 61.19 31.41 61.19 21.41 68.08 21.41 68.08 31.41 78.08 31.41 78.08 38.3 68.08 38.3"/>
+                        <rect class="cls-1" x="72.08" y="72.08" width="6" height="6"/>
+                        <rect class="cls-2" x="72.08" y="72.08" width="12" height="12"/>
+                        <rect class="cls-2" x="42.3" y="72.08" width="14.89" height="12"/>
+                        <rect class="cls-2" x="15.41" y="72.08" width="12" height="12"/>
+                        <rect class="cls-2" x="15.41" y="42.3" width="12" height="14.89"/>
+                        <rect class="cls-2" x="15.41" y="15.41" width="12" height="12"/>
+                        <rect class="cls-2" x="42.3" y="15.41" width="14.89" height="12"/>
+                        <rect class="cls-2" x="72.08" y="15.41" width="12" height="12"/>
+                        <rect class="cls-2" x="72.08" y="42.3" width="12" height="14.89"/>
+                    </svg>
+                    <span class="link-text">การออกเเบบ</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.48 99.48">
+                        <path class="cls-2" d="M73.15,29.65,65,24.94,43.1,62.86a1.9,1.9,0,0,0,.7,2.59l.39.23L41.69,70a1,1,0,0,0,.37,1.4l2.3,1.33a1,1,0,0,0,.36.12h.15a1,1,0,0,0,.59-.19l.06,0a.9.9,0,0,0,.24-.27L48.27,68l.39.23.09,0a1.79,1.79,0,0,0,.32.13l.16,0a1.43,1.43,0,0,0,.29,0l.09,0h.06a2.6,2.6,0,0,0,.39-.05h0a2,2,0,0,0,.4-.16l.12-.07.25-.19.11-.1a2,2,0,0,0,.25-.33l0,0Zm-6.69.76,1.23.7L57.19,49.29c-.42-.21-.85-.41-1.27-.63Z"/>
+                        <path class="cls-1" d="M76.48,25.82l-1.6-.92a8.34,8.34,0,0,0,2.46-2.51l.09-.15a4.71,4.71,0,0,0-8.16-4.71l-.08.15a8.33,8.33,0,0,0-1,3.39l-1.59-.92a.83.83,0,0,0-1.15.31l-2,3.39A.86.86,0,0,0,63.84,25l9.83,5.67a.85.85,0,0,0,1.15-.31l2-3.4A.84.84,0,0,0,76.48,25.82Z"/>
+                        <polygon class="cls-1" points="52.94 34.87 33.33 68.83 37.69 71.35 30.97 71.35 30.97 34.87 52.94 34.87"/>
+                        <polygon class="cls-1" points="67.45 49.68 67.45 71.35 54.94 71.35 67.45 49.68"/>
+                        <path class="cls-1" d="M77,33.22l-3.46,6V77H24.93V28.45H56.64l2-3.51H21.42V80.51H77V33.18Z"/>
+                    </svg>
+                    <span class="link-text">ทดสอบสี</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.48 99.48">
+                        <path class="cls-1" d="M83.91,67.49H41.63l-12.77,14L19.67,67.42c-2.16,0-8-1.68-8-3.84V21.88A3.91,3.91,0,0,1,15.57,18H83.91a3.92,3.92,0,0,1,3.92,3.91v41.7A3.92,3.92,0,0,1,83.91,67.49Z"/>
+                        <path class="cls-2" d="M49.74,24.41a16.48,16.48,0,0,0,0,33h.47l2.47-.09-1.77-7-1.5,0a9.32,9.32,0,1,1,9.65-9.31,9.19,9.19,0,0,1-1.24,4.62l-1,1.66,6,3.85L64,49.23A16.47,16.47,0,0,0,49.74,24.41Z"/>
+                    </svg>
+                    <span class="link-text">กล่องข้อความ</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>        
+        <section class="hidden">
+            <div class="title">
+                <h1>เรื่องเล็กน้อย ที่ไม่เล็กสำหรับใครบางคน</h1>
+                <p>การออกเเบบที่ครอบคลุมผู้มีภาวะบกพร่องในการเห็นสี</p>
+            </div>
+            
+        </section>
+
+        <section class="hidden">
+            <h2>ผู้ชาย 1 ใน 12</h2> 
+            <div class="ppls-container">
+                <div class="ppls">
+                    <div class="ppl hidden">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><path class="cls-1" d="M37.18,58a3.15,3.15,0,0,0-.09-.42,12.15,12.15,0,0,0-.35-1.35c-.09-.3-.19-.61-.3-.9s-.22-.58-.35-.87-.16-.37-.25-.55-.21-.45-.33-.67a6.55,6.55,0,0,0-.32-.58,16.58,16.58,0,0,0-2-2.82c-.19-.21-.38-.42-.58-.62l-.08-.09c-.27-.28-.55-.54-.83-.79s-.76-.65-1.16-1L30,47l-.16-.11c-.25-.17-.5-.33-.76-.48s-.6-.35-.91-.51-.46-.24-.7-.35l-.58-.26c-.33-.14-.66-.27-1-.38a8.1,8.1,0,0,0-.79-.26l-.16,0c-.33-.1-.65-.18-1-.25s-.68-.15-1-.2S22.09,44,21.67,44l-.28,0-.51,0-.79,0h-.18l-.79,0-.49,0c-.41,0-.81.07-1.2.13l-.66.11-.66.13a17.2,17.2,0,0,0-6.67,3.08c-.2.15-.41.31-.6.48l-.38.32-.39.35c-.32.29-.63.6-.92.92l-.35.39c-.11.12-.22.25-.32.38s-.33.4-.48.6a17.08,17.08,0,0,0-2.53,4.75c-.08.2-.14.41-.21.62-.13.43-.25.87-.35,1.32l-.12.63c0,.21-.08.42-.11.63s-.06.44-.08.67a.28.28,0,0,0,0,.09c0,.16,0,.33,0,.49l0,.47c0,.27,0,.53,0,.8V72.88c0,.25,0,.5,0,.75s0,.49,0,.74.06.67.11,1,.11.67.17,1,.09.42.14.63l.06.24a5.44,5.44,0,0,0,.15.54l.15.51A16,16,0,0,0,4,79.9c.07.17.15.34.23.51s.25.52.39.77l.51.87c.19.29.38.58.58.86s.36.51.56.75a9.65,9.65,0,0,0,.72.86c.23.25.47.5.71.74l.61.58c.28.25.56.49.85.71.14.12.29.23.44.34s.45.33.68.48.62.4.94.58.53.3.81.44a15.55,15.55,0,0,0,2.38,1l.92.28a16.3,16.3,0,0,0,2.23.45c.39,0,.77.09,1.16.12a4.58,4.58,0,0,0,.53,0c.22,0,.45,0,.68,0h.18A17.41,17.41,0,0,0,37.5,72.88V61.3A17.23,17.23,0,0,0,37.18,58ZM33.5,72.88a13.66,13.66,0,0,1-.31,2.88,13.41,13.41,0,0,1-13.1,10.53h-.17a8,8,0,0,1-.82,0H19a13.37,13.37,0,0,1-5.81-1.78c-.23-.14-.46-.28-.68-.43a12.7,12.7,0,0,1-2-1.61l0,0a13.43,13.43,0,0,1-3.33-5.35A13,13,0,0,1,6.67,75c0-.3-.09-.61-.11-.91V74c0-.32,0-.68,0-1.08V61.3a12.8,12.8,0,0,1,.22-2.39s0,0,0,0A13.43,13.43,0,0,1,17.5,48.11h0a12.83,12.83,0,0,1,2.4-.22h.17c.44,0,.84,0,1.22,0a13.39,13.39,0,0,1,5.78,1.92c.22.13.43.27.63.41a12.49,12.49,0,0,1,1.94,1.64l0,0a13.43,13.43,0,0,1,3.23,5.46,13.07,13.07,0,0,1,.46,2.17,12.26,12.26,0,0,1,.12,1.73Z"/><path class="cls-1" d="M6.13,25.11l0,.21q.06.42.15.81s0,0,0,0c.06.3.14.6.22.89,0,0,0,0,0,0h0q.15.51.33,1c.11.28.22.56.35.84,0,.11.1.23.15.34s.24.48.37.71.35.6.54.89.37.55.57.81l.1.12a6.12,6.12,0,0,0,.4.49c.09.11.18.22.28.32A13.32,13.32,0,0,0,11,33.93c.22.18.44.36.66.52s.46.33.7.48.48.3.73.44.5.27.75.4l.69.32c.29.12.59.24.89.34l.59.19h0l.74.19.77.16h0l.53.08.38,0,.23,0,.54,0,.72,0,.72,0,.5,0,.52-.05a14.18,14.18,0,0,0,2.76-.63l.06,0,.54-.2a13.89,13.89,0,0,0,4-2.38,3.17,3.17,0,0,0,.34-.3c.33-.3.65-.62.95-.95a6.27,6.27,0,0,0,.42-.48l0,0,.31-.39c.2-.27.39-.53.57-.81s.19-.29.28-.44c.24-.39.45-.78.65-1.19.08-.17.16-.33.23-.51s.13-.31.19-.46.14-.36.2-.54a.14.14,0,0,0,0-.06,14.18,14.18,0,0,0,.63-2.76c0-.17,0-.35,0-.52s0-.33,0-.5,0-.48,0-.72,0-.48,0-.72,0-.36,0-.54a1.64,1.64,0,0,0,0-.23c0-.13,0-.26-.05-.38s0-.36-.08-.53v0c0-.26-.1-.52-.16-.77s-.12-.5-.19-.74c0,0,0,0,0,0-.06-.2-.13-.4-.19-.59s-.22-.6-.34-.89-.21-.46-.32-.69-.26-.51-.4-.75-.28-.49-.44-.73-.31-.47-.48-.7-.34-.44-.52-.66a13.32,13.32,0,0,0-1.33-1.38c-.12-.11-.24-.22-.37-.32a2.76,2.76,0,0,0-.27-.23L28.41,12l0,0c-.23-.17-.46-.34-.71-.49A6.59,6.59,0,0,0,27,11a11.65,11.65,0,0,0-1.22-.62c-.27-.13-.55-.24-.84-.35s-.65-.23-1-.33h0c-.29-.08-.59-.16-.89-.22h0q-.39-.09-.81-.15l-.21,0c-.3,0-.61-.07-.92-.09s-.66,0-1,0a14,14,0,0,0-14,14c0,.34,0,.67,0,1S6.09,24.81,6.13,25.11ZM20,13.19h.43a9.89,9.89,0,0,1,7.24,3.58,3,3,0,0,1,.22.28A9.5,9.5,0,0,1,29,18.82a8,8,0,0,1,.52,1.3A9.58,9.58,0,0,1,30,23.19a10,10,0,0,1-6.79,9.47,10,10,0,0,1-3.21.53,9.58,9.58,0,0,1-3.07-.49,8.12,8.12,0,0,1-1.31-.52,10.12,10.12,0,0,1-1.75-1.1,3.15,3.15,0,0,1-.29-.22A10,10,0,0,1,10.39,26,9.69,9.69,0,0,1,10,23.62c0-.14,0-.29,0-.43A10,10,0,0,1,20,13.19Z"/><path class="cls-2" d="M26,23.65l-5.52,5.52A6,6,0,0,0,26,23.65Z"/><path class="cls-2" d="M16.74,28.21,25,19.93a6,6,0,1,0-8.28,8.28Z"/><path class="cls-2" d="M20.09,51.89h-.18A9.42,9.42,0,0,0,10.5,61.3v5.14L24.14,52.81A9.33,9.33,0,0,0,20.09,51.89Z"/><path class="cls-2" d="M26.86,54.77,10.5,71.13v1.75a9.35,9.35,0,0,0,2.84,6.72L29.5,63.45V61.3A9.33,9.33,0,0,0,26.86,54.77Z"/><path class="cls-2" d="M19.91,82.29h.18a9.42,9.42,0,0,0,9.41-9.41V68.13L16.13,81.5A9.3,9.3,0,0,0,19.91,82.29Z"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                    </div>
+                </div>
+            </div>               
+                
+            <h2>ผู้หญิง 1 ใน 200</h2>
+                <div class="ppls-container">
+                    <div class="ppls hidden">
+                        <div class="ppl">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48">
+                                <g id="Layer_1" data-name="Layer 1">
+                                    <path
+                                        d="M6.67,58.91s0,0,0,0A13.43,13.43,0,0,1,17.46,48.11h0a13,13,0,0,1,2.41-.22H20v-4h-.18l-.78,0-.5,0c-.41,0-.81.07-1.19.13l-.67.11-.65.13a17.18,17.18,0,0,0-6.68,3.08c-.19.15-.41.31-.6.48l-.38.32L8,48.54c-.31.29-.63.6-.92.92-.12.13-.24.26-.34.39a3.9,3.9,0,0,0-.33.38c-.16.19-.33.4-.47.6a17.37,17.37,0,0,0-2.54,4.75c-.08.2-.14.41-.21.62-.13.43-.25.87-.35,1.32l-.12.63c0,.21-.08.42-.1.63s-.06.44-.09.67a.28.28,0,0,0,0,.09c0,.16,0,.33,0,.49s0,.31,0,.47,0,.53,0,.8V72.88c0,.25,0,.5,0,.75s0,.49,0,.74.06.67.12,1,.1.67.16,1,.09.42.15.63l.06.24a3.58,3.58,0,0,0,.14.54,4.91,4.91,0,0,1,.15.51c.18.55.4,1.09.63,1.62l.23.51c.12.26.25.52.39.77s.34.59.52.87l.57.86c.19.26.37.51.57.75a8.09,8.09,0,0,0,.71.86c.23.25.47.5.72.74s.39.39.6.58.56.49.85.71.3.23.44.34.45.33.68.48.62.4.94.58.53.3.81.44a15.55,15.55,0,0,0,2.38,1l.93.28a15.86,15.86,0,0,0,2.22.45l1.16.12.53,0c.22,0,.46,0,.68,0H20v-4h-.16a8.15,8.15,0,0,1-.83,0h-.13a13.45,13.45,0,0,1-5.81-1.78c-.22-.14-.46-.28-.68-.43a13.19,13.19,0,0,1-2-1.61v0a13.34,13.34,0,0,1-3.34-5.35A13,13,0,0,1,6.62,75c0-.3-.09-.61-.1-.91V74a8.91,8.91,0,0,1,0-1.08V61.3A12.79,12.79,0,0,1,6.67,58.91Z"
+                                        fill="#c6c" />
+                                    <path
+                                        d="M20,13.19H20v-4H20a14,14,0,0,0-14,14c0,.34,0,.67,0,1s0,.62.09.92l0,.21c0,.28.1.55.16.81v0c.06.3.14.6.22.89,0,0,0,0,0,0h0c.09.34.2.67.32,1s.22.56.35.84c0,.11.1.23.15.34s.25.48.38.71.34.6.53.89a9.19,9.19,0,0,0,.58.81.94.94,0,0,0,.09.12,4.63,4.63,0,0,0,.41.49,2.69,2.69,0,0,0,.27.32A13.32,13.32,0,0,0,11,33.93c.23.18.44.36.67.52s.45.33.69.48.49.3.74.44.5.27.75.4.45.22.69.32.58.24.88.34l.59.19h0l.74.19.76.16h0l.53.08.38,0,.24,0,.53,0,.73,0H20v-4H20a9.49,9.49,0,0,1-3.07-.49,7.77,7.77,0,0,1-1.31-.52,9.76,9.76,0,0,1-1.75-1.1,2.32,2.32,0,0,1-.3-.22A10,10,0,0,1,10.34,26,9.69,9.69,0,0,1,10,23.62v-.43A10,10,0,0,1,20,13.19Z"
+                                        fill="#c6c" />
+                                    <path class="cls-white2"
+                                        d="M37.54,61.3V72.88A17.4,17.4,0,0,1,20.13,90.29H20V43.89h.09A17.4,17.4,0,0,1,37.54,61.3Z"
+                                         />
+                                    <path class="cls-white2" d="M34,23.19a14,14,0,0,1-14,14v-28A14,14,0,0,1,34,23.19Z"  />
+                                    <path d="M20,17.19v7.67L16.7,28.21a5.93,5.93,0,0,1-2.74-5,6,6,0,0,1,6-6Z" fill="#9d49a3" />
+                                    <path d="M20,51.89v5l-9.58,9.58V61.3a9.41,9.41,0,0,1,9.4-9.41Z" fill="#9d49a3" />
+                                    <path d="M20,61.54V72.85L13.29,79.6a9.35,9.35,0,0,1-2.83-6.72V71.13Z" fill="#9d49a3" />
+                                    <path d="M20,77.54v4.75h-.18a9.34,9.34,0,0,1-3.78-.79Z" fill="#9d49a3" />
+                                </g>
+                            </svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>    
+                        </div>
+                        <div class="ppl">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 99.48"><rect class="cls-white2" x="2.5" y="43.88" width="35" height="46.4" rx="17.41"/><circle class="cls-white2" cx="20" cy="23.19" r="14"/></svg>
+                        </div>
+                    </div>
+                </div>
+                    
+            <h1>เป็นผู้มีอาการตาบอดสี</h1>
+            
+        </section>
+        
+        <section class="hidden">
+            <div class="title">
+                <h1>คนเหล่านี้ มองเห็นสีต่างจากคนปกติ</h1>
+                <p>หลายสิ่งที่เราสร้าง อาจเข้าไม่ถึงกลุ่มคนเหล่านี้</p>
+            </div>
+            
+        </section>
+
+        <section class="hidden">
+            <div class="rowDisplay-container">
+                <div class="rowDisplay">
+                    <div class="rowDisplay-A">
+                        <h2>กิจกรรมที่เเสนง่าย</h2>
+                        <p>กิจกรรมที่คนทั่วไปทำ อย่างเช่นการดูกีฬา อาจเป็นสิ่งที่คนผู้มีภาวะตาบอดสีเข้าไม่ถึงในกรณีที่เสื้อสีเเต่ละฝั่งคล้ายกัน</p>
+                    </div>
+                    <div class="rowDisplay-B">
+                        <svg id="Football" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 99.48">
+                            <g class="animate animate--infinite animate--slow bounceRight" id="man1">
+                                <g id="body1">
+                                    <rect y="43.89" width="35" height="46.4" rx="17.41" />
+                                    <circle cx="17.5" cy="23.19" r="14" />
+                                </g>
+                                <g id="shirtBody">
+                                    <path id="shirtColor" d="M35,61.3V72.88A17.42,17.42,0,0,1,17.58,90.29h-.17A17.41,17.41,0,0,1,0,72.88V61.3A17.54,17.54,0,0,1,.32,58c0-.22.09-.43.15-.65s.16-.68.26-1,.11-.37.18-.55.13-.37.2-.56.14-.37.22-.56c.19-.46.4-.91.63-1.34.08-.16.16-.32.26-.48a1.82,1.82,0,0,1,.15-.27c.11-.18.22-.37.34-.55s.29-.45.44-.66.31-.43.47-.64A7.81,7.81,0,0,1,4.2,50l.45-.51A15.19,15.19,0,0,1,6.19,48l.29.66a12,12,0,0,0,9.45,7.13,14.11,14.11,0,0,0,1.58.1,12,12,0,0,0,11-7.23L28.8,48a17.75,17.75,0,0,1,1.55,1.46l.2.22c.35.39.68.79,1,1.21.16.21.31.42.45.64s.23.34.34.52.23.37.34.56a.56.56,0,0,1,0,.08c.13.22.25.45.36.68a8,8,0,0,1,.35.72c.11.22.2.45.3.68A17.36,17.36,0,0,1,35,61.3Z" />
+                                    <path id="colar" d="M28.8,48l-.29.67a12,12,0,0,1-11,7.23,14.11,14.11,0,0,1-1.58-.1,12,12,0,0,1-9.45-7.13L6.19,48a15.19,15.19,0,0,0-1.54,1.46,14,14,0,0,0,11,8.31,14.29,14.29,0,0,0,1.83.12,14,14,0,0,0,12.84-8.44A17.75,17.75,0,0,0,28.8,48Z"  opacity="0.6"/>
+                                </g>
+                            </g>
+                                <g class="animate animate--infinite animate--slow bounceLeft" id="man2">
+                                    <g id="body1-2" data-name="body1"><rect x="85" y="43.89" width="35" height="46.4" rx="17.41" />
+                                        <circle cx="102.5" cy="23.19" r="14" />
+                                    </g>
+                                    <g id="shirtBody-2" data-name="shirtBody">
+                                        <path id="shirtColor-2" data-name="shirtColor" d="M120,61.3V72.88a17.42,17.42,0,0,1-17.42,17.41h-.17A17.41,17.41,0,0,1,85,72.88V61.3A17.54,17.54,0,0,1,85.32,58c0-.22.09-.43.15-.65s.16-.68.26-1,.11-.37.18-.55.13-.37.2-.56.14-.37.22-.56c.19-.46.4-.91.63-1.34.08-.16.16-.32.26-.48a1.82,1.82,0,0,1,.15-.27c.11-.18.22-.37.34-.55s.29-.45.44-.66.31-.43.47-.64A7.81,7.81,0,0,1,89.2,50c.15-.18.3-.34.45-.51A15.19,15.19,0,0,1,91.19,48l.29.66a12,12,0,0,0,9.45,7.13,14.11,14.11,0,0,0,1.58.1,12,12,0,0,0,11-7.23l.29-.67a17.75,17.75,0,0,1,1.55,1.46l.2.22c.35.39.68.79,1,1.21.16.21.31.42.45.64s.23.34.34.52.23.37.34.56a.56.56,0,0,1,0,.08c.13.22.25.45.36.68a8,8,0,0,1,.35.72c.11.22.2.45.3.68A17.36,17.36,0,0,1,120,61.3Z" />
+                                        <path id="colar-2" data-name="colar" d="M113.8,48l-.29.67a12,12,0,0,1-11,7.23,14.11,14.11,0,0,1-1.58-.1,12,12,0,0,1-9.45-7.13L91.19,48a15.19,15.19,0,0,0-1.54,1.46,14,14,0,0,0,11,8.31,14.29,14.29,0,0,0,1.83.12,14,14,0,0,0,12.84-8.44A17.75,17.75,0,0,0,113.8,48Z"  opacity="0.6"/>
+                                    </g>
+                                </g>
+                                <g class="animate animate--infinite animate--slow bounce" id="ball">
+                                    <circle id="ballbase" cx="60" cy="78.69" r="12" />
+                                    <path id="ballPattern" d="M49.87,80.17a11.59,11.59,0,0,1,.26-4.82q-.6-.13-1.17-.21a11.51,11.51,0,0,0,.36,8.08A7.54,7.54,0,0,1,49.87,80.17Zm3.84,1.46c0,.13.11.32.2.57A12.84,12.84,0,0,0,54.76,84a9,9,0,0,0,1.58,2,25.3,25.3,0,0,0,4.83,0,11.13,11.13,0,0,0,2.36-4.19l.08-.25c-.1-.18-.21-.36-.31-.55-.48-.82-.93-1.53-1.37-2.22-.27-.42-.53-.81-.78-1.22l-.42-.08c-.47-.07-.93-.13-1.39-.17a9.64,9.64,0,0,0-3.35.21,24.85,24.85,0,0,0-2.29,4Zm-4.39,1.59s0,0,0,0,0,0,0,0Zm12.33-13.6a28.36,28.36,0,0,0-5,0l-.29.32c-.21.24-.53.62-.88,1.07A9.58,9.58,0,0,0,54,73.81l.4.7L55,75.58c.33.57.66,1.15,1,1.69a13,13,0,0,1,5.17,0c.63-1,1.35-1.92,2-2.85.22-.28.44-.57.65-.86a9.18,9.18,0,0,0-1-2.46h0l0,0h0l0,0A5.43,5.43,0,0,0,61.65,69.62ZM56.06,86.19a8.78,8.78,0,0,1-1.56-2,13.18,13.18,0,0,1-1.08-2.41,8.56,8.56,0,0,1-3.33-1.29A7.79,7.79,0,0,0,49.67,84c.09.17.18.34.28.51a11.63,11.63,0,0,0,2.92,3.37l.38.14a10.74,10.74,0,0,0,2.07.54A4.05,4.05,0,0,1,56.06,86.19Zm-7-11.35h0Zm4.64-1.2a13.06,13.06,0,0,1,2.74-4.21,8,8,0,0,1-.64-1.55,11.54,11.54,0,0,0-6.73,7c.39,0,.8.13,1.22.22A6.21,6.21,0,0,1,53.69,73.64Zm17.21,9h0a.64.64,0,0,0,0,.07Zm-2.66-7a14.84,14.84,0,0,1,0,4.75,7.73,7.73,0,0,1,1.67,2.94l.54-.37.43-.31a11.6,11.6,0,0,0-.23-8.53,4,4,0,0,1-.7-.49A13.67,13.67,0,0,1,68.24,75.64Zm-6.32-6.2A5.91,5.91,0,0,1,63.12,71a9.13,9.13,0,0,1,1,2.53A16.41,16.41,0,0,1,68,75.4a13.1,13.1,0,0,0,1.75-2.07c-.1-.4-.17-.81-.25-1.24h0a11.52,11.52,0,0,0-5.71-4.36A9.32,9.32,0,0,0,61.92,69.44ZM63,88.9a7.1,7.1,0,0,1-3,1.39,11.62,11.62,0,0,0,5.74-1.55A12.75,12.75,0,0,0,67,87.93,8.19,8.19,0,0,1,63,88.9Zm-9.23-.4A12,12,0,0,0,57.37,90a7.19,7.19,0,0,1-1.9-1.13A9.52,9.52,0,0,1,53.81,88.5Zm14.26-7.86a9.36,9.36,0,0,1-4.18,1.12,11.91,11.91,0,0,1-2.45,4.47c0,.07.08.16.13.25A25.35,25.35,0,0,0,63,88.59a8.4,8.4,0,0,0,4.3-1.18l.12-.07a11.86,11.86,0,0,0,2.24-3.76A5.88,5.88,0,0,0,69,82,10,10,0,0,0,68.07,80.64Z" fill="#323335"/>
+                                </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="rowDisplay2">
+                    <div class="rowDisplay-B">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 99.48">
+                            <g id="Router">
+                                <polygon id="routerbase"
+                                points="112.58 65.29 112.58 5.93 106.64 5.93 106.64 65.29 13.36 65.29 13.36 5.93 7.42 5.93 7.42 65.29 0 65.29 4.64 93.55 115.36 93.55 120 65.29 112.58 65.29"
+                                />
+                                    <rect class="animate animate--infinite beep" style="--order: 2" id="slot2" x="41.05" y="65.22" width="11.87" height="11.87" />
+                                <g id="yellowGroup">                
+                                    <rect style="--order: 3;" id="slot4" x="93.35" y="65.3" width="11.87" height="11.87" height="8" />
+                                    <rect style="--order: 2;" id="slot3" x="67.2" y="65.3" width="11.87" height="11.87" height="8" />
+                                    <rect style="--order: 1;" id="slot1"x="14.9" y="65.3" width="11.87" height="11.87" height="8" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="rowDisplay-A">
+                        <h2>เครื่องใช้ในชีวิตประจำวัน</h2>
+                        <p>อุปกรณ์ทั่วไปที่ใช้เเสงไฟLED เพื่อบอกข้อมูลต่างๆ ไฟเเดงหรือเขียวเมื่อเเบตเต็มหรือเเบตต่ำ ไฟเราเตอร์ ซึ่งอาจเเยกลำบากในกลุ่มผู้มีภาวะนี้</p>
+                    </div>
+                </div>
+                <div class="rowDisplay">
+                    <div class="rowDisplay-A">
+                        <h2>การรับข้อมูล ข่าวสาร</h2>
+                        <p>หลายครั้ง ข้อมูลที่ต้องการสื่อสารผ่านกราฟ บรรจุภัณฑ์ หรือรูปภาพอาจตกหล่นในกลุ่มผู้มีภาวะตาบอดสีได้</p> 
+                    </div>
+                    <div class="rowDisplay-B">
+                        <svg id="graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 99.48">
+                            <rect id="dark_blue" data-name="dark blue" x="0.06" y="62.61" width="82.15" height="16"
+                                fill="#2a5daa" />
+                            <rect id="pink" x="0.06" y="41.74" width="74.58" height="16" fill="#e01883" />
+                            <rect id="red" x="0.06" y="20.87" width="108.94" height="16" fill="#ed1c24" />
+                            <rect id="red-2" data-name="red" x="0.06" width="115.29" height="16" fill="#ff7f2b" />
+                            <rect id="red-3" data-name="red" x="0.06" y="83.48" width="60" height="16" fill="#2fa3e1" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+                       
+        </section>
+        <section class="hidden">
+            <div class="title">
+                <h1>มุมมองของคนเหล่านี้ ไม่ได้รับความเข้าใจ</h1>
+                <p>ถึงเเม้คนเหล่านี้มีการปรับตัวกับข้อจำกัดเหล่านี้ได้ ก็ไม่ได้เเปลว่าสิ่งนั้นเป็นสิ่งที่ไม่จำเป็นต้องให้ความสำคัญ</p>                   
+            </div>
+    
+        </section>
+
+        <section class="hidden">
+            <div class="title">
+                <h1>นักออกเเบบ</h1>
+                <p>เป็นกลุ่มคนที่มีส่วนร่วมในการสร้างสิ่งที่จับต้องผู้คนที่เเตกต่าง จึงควรมีความเข้าใจข้อเเตกต่างเหล่านี้</p>                   
+            </div>
+    
+        </section>
+
+        
+        <!-- <div id="chatbox">
+            <form action="" class="chatbox_create">
+                <input type="color" id="color" value ="#cc66cc">
+                <button type="button" id="createBtn">+</button>
+            </form>
+            <div id="list">
+                
+
+                
+            </div>
+
+        </div> -->
+
+        
+
+        
+
+    </main>
+
+<div class="app-container">
+    <div id="app">
+            <button class="add-note" type="button">
+                <div class="add-noteText">+</div>
+            </button>
+    </div>
+</div>
+
+    
+       
+</body>
+
+</html>
