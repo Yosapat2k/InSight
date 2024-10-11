@@ -167,7 +167,7 @@
 }
 
 body {
-    background-image: url(blackboard.png);
+    background-image: url("../img/blackboard.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
