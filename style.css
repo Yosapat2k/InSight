@@ -29,7 +29,7 @@
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 0.8s;
+    transition: all 0.6s;
 }
 
 .show {
@@ -117,8 +117,12 @@
         fill: var(--yellowstandard);
     }
     60% {
-        fill: var(--text-whitealt);
+        fill: var(--bg-seondary);
     }
+}
+
+@keyframes extend {
+
 }
 
 .slideInLeft {
@@ -222,9 +226,13 @@ main {
     text-align: center;
     color: var(--text-primary);
     background: var(--bg-primary);
+    
+    width: 100%;
+}
+
+.logo span {
     font-size: 2rem;
     letter-spacing: 0.3ch;
-    width: 100%;
 }
 
 .logo svg{
@@ -257,8 +265,8 @@ main {
 }
 
 .link-text {
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 1rem;
+    white-space: nowrap;   
     margin-left: 1rem;
     font-weight: bold;
     letter-spacing: 0.1ch;
@@ -271,7 +279,6 @@ main {
 .nav-link svg {
     min-width: 2.5rem;
     max-width: 2.5rem;
-    margin: 0 1.25rem;
     align-content: center;
 }
 
@@ -304,11 +311,11 @@ section {
 }
 
 section h1 {
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
 }
 
 section h2 {
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1rem;
 }
 
 section p {
@@ -332,98 +339,78 @@ section p {
 .ppls:nth-child(2) {
     transition-delay: 100ms;
 }
-
 .ppls:nth-child(3) {
     transition-delay: 150ms;
 }
-
 .ppls:nth-child(4) {
     transition-delay: 200ms;
 }
-
-
 .ppls:nth-child(5) {
     transition-delay: 250ms;
 }
 .ppl:nth-child(2) {
     transition-delay: 100ms;
 }
-
 .ppl:nth-child(3) {
     transition-delay: 150ms;
 }
-
 .ppl:nth-child(4) {
     transition-delay: 200ms;
 }
-
 .ppl:nth-child(5) {
     transition-delay: 250ms;
 }
-
 .ppl:nth-child(6) {
     transition-delay: 300ms;
 }
-
 .ppl:nth-child(7) {
     transition-delay: 350ms;
 }
-
 .ppl:nth-child(8) {
     transition-delay: 400ms;
 }
-
 .ppl:nth-child(9) {
     transition-delay: 450ms;
 }
-
 .ppl:nth-child(10) {
     transition-delay: 500ms;
 }
-
 .ppl:nth-child(11) {
     transition-delay: 550ms;
 }
-
 .ppl:nth-child(12) {
     transition-delay: 600ms;
 }
 
-.ppl {
-    padding-left: 0.5rem;
-}
-
 .ppl svg {
-    min-width: 1rem;
-    max-width: 1rem;
+    min-width: 0.75rem;
+    max-width: 0.75rem;
     align-content: center;
 }
 
 .rowDisplay {
     display: flex;
-    border: 0.1rem solid var(--text-whitealt);
+    border: 0.25rem solid var(--text-whitealt);
     padding: 1rem;
-    margin: 1rem 4rem 1rem 1rem;
     justify-content: center;
 }
 
 .rowDisplay:hover {
-    filter: url('./emulator/filters.svg#deuteranopia');
-    -webkit-filter: url('./emulator/filters.svg#deuteranopia');
+    filter: url('./emulator/filters.svg#protannopia');
+    -webkit-filter: url('./emulator/filters.svg#protanopia');
     transition: filter 600ms ease-in-out;
 }
 
 .rowDisplay2 {
     display: flex;
-    border: 0.1rem solid var(--text-whitealt);
+    border: 0.25rem solid var(--text-whitealt);
     padding: 1rem;
-    margin: 1rem 1rem 1rem 4rem;
     justify-content: center;
 }
 
 .rowDisplay2:hover {
-    filter: url('./emulator/filters.svg#deuteranopia');
-    -webkit-filter: url('./emulator/filters.svg#deuteranopia');
+    filter: url('./emulator/filters.svg#protanopia');
+    -webkit-filter: url('./emulator/filters.svg#protanopia');
     transition: filter 600ms ease-in-out;
 }
 
@@ -432,7 +419,8 @@ section p {
 }
 
 .rowDisplay-A p {
-    line-height: 2.5rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
     color: var(--text-whitealt);
 }
 
@@ -444,8 +432,15 @@ section p {
 }
 
 .rowDisplay-B svg {
-    min-width: 10rem;
+    min-width: 5rem;
     max-width: 10rem;
+}
+
+.rowDisplaySlide:nth-child(2) {
+    transition-delay: 100ms;
+}
+.rowDisplaySlide:nth-child(3) {
+    transition-delay: 150ms;
 }
 
 /* SVG Color */
@@ -478,7 +473,7 @@ section p {
     fill: var(--yellowstandard);
 }
 
-#yellowGroup rect {
+#yellowGroup polygon {
     animation: beepBlack 8s ease forwards infinite;
     animation-delay: calc(var(--order) * 2s);
 }
@@ -500,7 +495,6 @@ section p {
 #app {
     display: grid;
     grid-template-columns: repeat(auto-fill, 20rem);
-    padding: 2rem;
     gap: 2rem;
     height: 100vh;
     overflow: auto;
@@ -517,8 +511,9 @@ section p {
 }
 
 .add-note {
-    font-family: Pridi;
+    font-family: Sarabun;    
     font-size: large;
+    padding-bottom: 2rem;
     width: 20rem;
     height: 20rem;
     border: none;
@@ -528,7 +523,7 @@ section p {
     font-size: 10rem;
     cursor: pointer;
     color: var(--bg-primary);
-    transition: background var(--transition-speed);
+    transition: background-color var(--transition-speed);
 }
 
 .add-note:hover {
@@ -679,10 +674,12 @@ form input::-webkit-color-swatch{
 
     .rowDisplay {
         flex-direction: column;
+        margin: 2rem;
     }
 
     .rowDisplay2 {
         flex-direction: column;
+        margin: 2rem;
     }
 
     .rowDisplay-A {
@@ -696,6 +693,9 @@ form input::-webkit-color-swatch{
 /* Large screens */
 @media only screen and (min-width: 600px){
 
+    #app {
+        padding: 2rem;
+    }
     .app-container {
         margin-left: 5rem;
     }
@@ -714,18 +714,24 @@ form input::-webkit-color-swatch{
         opacity: 1;
     }
 
+    .nav-link svg {
+        margin: 0 1.25rem;
+    }
+
     section {
         padding-left: 5rem;
     }
 
-    .rowDisplay {
-        height: 20rem;
-        width: 50vw;
+    .rowDisplay {  
+        max-width: 50vw;
+        min-height: 30vh;
+        margin: 2rem 5rem 2rem 2rem;
     }
 
     .rowDisplay2 {
-        height: 20rem;
-        width: 50vw;
+        max-width: 50vw;
+        min-height: 40vh;
+        margin: 2rem 2rem 2rem 5rem;
     }
 
     .rowDisplay-A {
