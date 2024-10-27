@@ -168,6 +168,10 @@
     --redstandard: #e13232;
     --greenstandard: #00a14b;
     --yellowstandard: #f5c217;
+    --new-bg-primary: #2B2133;
+    --new-bg-secondary: #382e3f;
+    --new-primary: #F4C21B;
+    --new-secondary: #67AAC1;
 }
 
 body {
@@ -185,11 +189,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--bg-seondary);
+    background-color: var(--new-bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--text-secondary);
+    background-color: var(--new-primary);
 }
 
 main {
@@ -205,7 +209,7 @@ main {
 
 .navbar {
    position: fixed;
-   background-color: #323335;
+   background-color: var(--new-bg-secondary);
    transition: width 200ms ease;
    z-index: 1;
 }
@@ -225,8 +229,7 @@ main {
     margin-bottom: 1rem;
     text-align: center;
     color: var(--text-primary);
-    background: var(--bg-primary);
-    
+    background: var(--new-bg-primary);
     width: 100%;
 }
 
@@ -260,8 +263,8 @@ main {
 
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: var(--bg-primary);
-    color: var(--text-secondary);
+    background: var(--new-bg-primary);
+    color: var(--new-primary);
 }
 
 .link-text {
@@ -283,12 +286,12 @@ main {
 }
 
 .cls-1{
-    fill:#dd67e5;
+    fill: var(--new-primary);
     transition: var(--transition-speed);
 }
 
 .cls-2{
-    fill:#9d49a3;
+    fill: var(--new-secondary);
     transition: var(--transition-speed);
 }
 
@@ -522,7 +525,7 @@ section p {
     border-radius: 1rem;
     font-size: 10rem;
     cursor: pointer;
-    color: var(--bg-primary);
+    color: var(--new-bg-primary);
     transition: background-color var(--transition-speed);
 }
 
