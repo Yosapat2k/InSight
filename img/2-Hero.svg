@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1139.68" y1="348.8" x2="649.03" y2="1198.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0.2" stop-color="#67aac1"/>
+      <stop offset="1" stop-color="#353745"/>
+    </linearGradient>
+  </defs>
+  <g id="hero">
+    <polygon id="bg2" points="1920 799.32 1050.57 799.32 1050.57 638.1 945.3 620.89 876.43 724.97 876.43 799.32 772.95 799.32 776.78 694.45 759.04 660.54 719.91 656.36 706.09 799.32 212.08 799.32 231.37 522.25 0 496.11 0 518.63 0 779.5 0 817.32 0 823.91 935.2 823.91 945.55 823.84 969.31 823.91 1920 823.91 1920 799.32" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
