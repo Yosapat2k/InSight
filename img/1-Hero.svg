@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="linear-gradient" x1="960" x2="960" y2="1080" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#353745"/>
-      <stop offset="1" stop-color="#212333"/>
+    <linearGradient id="linear-gradient" x1="960" y1="1078.95" x2="960" y2="1.05" gradientUnits="userSpaceOnUse">
+      <stop offset="0.55" stop-color="#f0f0f0"/>
+      <stop offset="1" stop-color="#67aac1"/>
     </linearGradient>
   </defs>
   <g id="hero">
-    <rect id="bg1" width="1920" height="1080" fill="url(#linear-gradient)"/>
+    <polyline id="bg1" points="1920 1.05 1920 1078.95 0 1078.95 0 1.05" fill="url(#linear-gradient)"/>
   </g>
 </svg>
