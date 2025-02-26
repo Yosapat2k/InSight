@@ -7,6 +7,7 @@
     <title>InSight</title>
     <link rel="stylesheet" href="style.css">
     <script defer type="module" src="main.js"></script> 
+    
 </head>
 <body>
     <nav class="navbar">
@@ -96,23 +97,22 @@
             </li>
         </ul>
     </nav>
-    
+    <section id="hero">
+      <div id="banner-wrapper">
+        <div id="banner-bg-1" data-speed="0.2"></div>
+        <div id="banner-bg-2" data-speed="2"></div>
+        <div id="banner-bg-3" data-speed="4"></div>
+        <div id="banner-bg-4" data-speed="8"></div>
+        <div id="banner-bg-5" data-speed="12"></div>
+        <div id="banner-bg-6" data-speed="14"></div>
+      </div>       
+    </section>
+ 
     <main class>
-        <section>
-            <div id="banner-wrapper ">
-                <div id="banner-bg-1" data-speed="0.2"></div>
-                <div id="banner-bg-2" data-speed="2"></div>
-                <div id="banner-bg-3" data-speed="4"></div>
-                <div id="banner-bg-4" data-speed="8"></div>
-                <div id="banner-bg-5" data-speed="12"></div>
-                <div id="banner-bg-6" data-speed="14"></div>
-            </div>      
-        </section>
-
         <section class="stat-bg">
-            <div class="stat-wrapper">
-            <h2 class="hidden" style="color:var(--new-primary)">ในประเทศไทย</h2>
-            <div class="hidden stat-container">
+            <div class="stat-wrapper animated-element animated-left">
+            <h2 style="color:var(--new-primary)">ในประเทศไทย</h2>
+            <div class="stat-container">
                 <div class="stat-body">
                     <h3>เพศชาย<br>
                         <span style="color:var(--new-primary)">1 ใน 12</span></h3>
@@ -209,11 +209,11 @@
                     </div>
                 </div>
             </div>
-            <h2 class="hidden">5.7 ล้านคนมีภาวะ<br>
+            <h2>5.7 ล้านคนมีภาวะ<br>
                 <span style="color:var(--new-secondary)">ตาบอดสี</span></h2>                
             </div>
 
-            <div class="button-1"><h2>สิ่งที่เกิดขึ้น</h2></div>
+            <div class="button-1 animated-element"><h2>สิ่งที่เกิดขึ้น</h2></div>
         </section>
 
         <section class="scene1">
@@ -278,43 +278,43 @@
             </div>
         </section>
 
-        <section class="hidden">
+        <section>
             <div class="griddisplay">
-              <div id="item1" class="item-card">
+              <div id="item1" class="item-card animated-element animated-left">
                 <img>
                 <div class="card-info"></div>
                 <img>
 
               </div>
-              <div id="item2" class="item-card">
+              <div id="item2" class="item-card animated-element animated-right">
               </div>
-              <div id="item3" class="item-card">
+              <div id="item3" class="item-card animated-element">
               </div>
-              <div id="item4" class="item-card">
+              <div id="item4" class="item-card animated-element">
               </div>
-              <div id="item5" class="item-card">
+              <div id="item5" class="item-card animated-element animated-left">
               </div>
-              <div id="item6" class="item-card">
+              <div id="item6" class="item-card animated-element">
               </div>
-              <div id="item7" class="item-card">
+              <div id="item7" class="item-card animated-element animated-left">
               </div>
-              <div id="item8" class="item-card">
+              <div id="item8" class="item-card animated-element">
               </div>
-              <div id="item9" class="item-card">
+              <div id="item9" class="item-card animated-element animated-right">
               </div>
             </div>
         </section>
 
-        <section class="hidden">
+        <section>
             <div class="title">
                 <h1>ภาวะนี้กระทบต่อการใช้ชีวิต</h1>
                 <p>หลายสิ่งที่เราสร้าง อาจเข้าไม่ถึงกลุ่มคนเหล่านี้</p>
             </div>
         </section>
 
-        <section class="hidden">
+        <section>
             <div class="rowDisplay-container">
-                <div class="rowDisplay rowDisplaySlide hidden">
+                <div class="rowDisplay rowDisplaySlide">
                     <div class="rowDisplay-A">
                         <h1>กิจกรรมที่เเสนง่าย</h1>
                         <p>กิจกรรมที่คนทั่วไปทำ อย่างเช่นการดูกีฬา อาจเป็นสิ่งที่คนผู้มีภาวะตาบอดสีเข้าไม่ถึงในกรณีที่เสื้อสีเเต่ละฝั่งคล้ายกัน</p>
@@ -347,7 +347,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="rowDisplay2 rowDisplaySlide hidden">
+                <div class="rowDisplay2 rowDisplaySlide">
                     <div class="rowDisplay-A">
                         <h1>เครื่องใช้ในชีวิตประจำวัน</h1>
                         <p>เเสงไฟLEDบอกสถานะ ไฟเเดงหรือเขียวเมื่อเเบตเต็มหรือเเบตต่ำ อาจมีปัญหาในการเข้าถึงกลุ่มผู้มีภาวะนี้</p>
@@ -369,7 +369,7 @@
                           </svg>
                     </div>                   
                 </div>
-                <div class="rowDisplay rowDisplaySlide hidden">
+                <div class="rowDisplay rowDisplaySlide">
                     <div class="rowDisplay-A">
                         <h1>การรับข้อมูล ข่าวสาร</h1>
                         <p>หลายครั้ง ข้อมูลที่ต้องการสื่อสารผ่านกราฟ บรรจุภัณฑ์ หรือรูปภาพอาจตกหล่นในกลุ่มผู้มีภาวะตาบอดสีได้</p> 
@@ -403,7 +403,7 @@
                        
         </section>
 
-        <section class="hidden">
+        <section>
             <div class="CVD">
                 <div class="CVD-A">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
@@ -523,7 +523,7 @@
 </div>
   
     <main class="white-bg"> 
-        <section class="hidden">
+        <section>
             <div class="title">
                 <h1>มุมมองของคนเหล่านี้ ไม่ได้รับความเข้าใจ</h1>
                 <p>ถึงเเม้คนเหล่านี้มีการปรับตัวกับข้อจำกัดเหล่านี้ได้ ก็ไม่ได้เเปลว่าสิ่งนั้นเป็นสิ่งที่ไม่จำเป็นต้องให้ความสำคัญ</p>                   
@@ -531,7 +531,7 @@
     
         </section>
 
-        <section class="hidden">
+        <section>
             <div class="title">
                 <h1>นักออกเเบบ</h1>
                 <p>เป็นกลุ่มคนที่มีส่วนร่วมในการสร้างสิ่งที่จับต้องผู้คนที่เเตกต่าง จึงควรมีความเข้าใจข้อเเตกต่างเหล่านี้</p>                   
@@ -552,3 +552,6 @@
 </body>
 
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>

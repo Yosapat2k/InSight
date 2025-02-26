@@ -1,35 +1,152 @@
-//Animations//
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-    } else {
-        entry.target.classList.remove('show');
+//Slide left//
+
+const animatedLeft = document.querySelectorAll('.animated-left');
+
+animatedLeft.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+      end: '50% 50%',
+      markers: false,
+      toggleActions: 'play none none reverse'
     }
+  });
+  tl.to(element,{
+    x: 400
+  });
+});
+
+//Slide Right//
+
+const animatedRight = document.querySelectorAll('.animated-right');
+
+animatedRight.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+      end: '50% 50%',
+      markers: false,
+      toggleActions: 'play none none reverse'
+    }
+  });
+  tl.to(element,{
+    x: -400
   });
 });
 
 
-const hiddenElments = document.querySelectorAll('.hidden');
-hiddenElments.forEach((el) => observer.observe(el));
 
-// const observer2 = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//           entry.target.classList.add('in-view'); 
-//       } else {
-//           entry.target.classList.remove('in-view'); //  optional
-//       }
+//Fade in bottom//
+const animatedElements = document.querySelectorAll('.animated-element');
+
+animatedElements.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+      end: 'top 20%',
+      toggleActions: 'play none none reverse',
+      markers: false,
+    },
+  });
+
+  tl.from(element, {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+  });
+});
+//smooth scroll
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+
+//Parallax//
+  // const bannerWrapper = document.querySelector('#banner-wrapper')
+  // const bannerBG = document.querySelector('div[id*="banner-bg-"]')
+
+  // const tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: bannerWrapper,
+  //     start: 'top top',
+  //     scrub: true
+  //   }
+  // })
+
+  // bannerBG.forEach(bg => {
+  //   const bgSpeed = bg.getAttribute('data-speed')
+
+  //   tl.to(bg, {
+  //     y: 60 * bgSpeed,
+  //     duration: 2
+  //   })
+  // })
+
+//Animation Lenis//
+// const entries = document.querySelectorAll('.entry')
+
+// entries.forEach(entry => {
+//   let entryLeft = entry.querySelector('.anim-left')
+//   let entryRight = entry.querySelector('.anim-right')
+
+//   gsap.set(entryLeft, {
+//     xPercent: -100,
+//     opacity: 0
+//   })
+//   gsap.set(entryRight, {
+//     xPercent: 100,
+//     opacity: 0
+//   })
+
+
+  
+//   // gsap.to(entryLeft, {
+//   //   scrollTrigger:{
+//   //     trigger: entry,
+//   //     start: 'top bottom',
+//   //     end: 'bottom 90%',
+//   //     scrub: true,
+//   //   },
+//   //   xPercent: 0,
+//   //   opacity: 1
+//   // })
+// })
+
+
+
+//Animations//
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry)
+//     if (entry.isIntersecting) {
+//         entry.target.classList.add('show');
+//     } else {
+//         entry.target.classList.remove('show');
+//     }
 //   });
-// }, {
-//   threshold: 0.4 // trigger animation at different scroll points
 // });
 
-// const boxes = document.querySelectorAll('.box');
-// boxes.forEach(box => observer2.observe(box));
 
-
+// const hiddenElments = document.querySelectorAll('.hidden');
+// hiddenElments.forEach((el) => observer.observe(el));
 
 //Chatbox App New //
 

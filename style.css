@@ -201,9 +201,6 @@ body {
 
 main {
     display: inline;
-    /* margin-left: 5rem; */
-    /* padding: 1rem; */
-    /* height: 100vh; */
     overflow: hidden;
 }
 
@@ -367,12 +364,24 @@ p {
     color: var(--text-whitealt);
 }
 
+#hero {
+    padding: 0;
+    position: relative;
+}
+
+#banner-wrapper{
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    pointer-events: none;
+}
+
 div[id*='banner-bg-'] {
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     position: absolute;
     top: 0;
     left: 0;
@@ -383,7 +392,6 @@ div[id*='banner-bg-'] {
     background-color: var(--text-primary);
 }
 
-
 #banner-bg-1 {background-image: url("./img/1-Hero.svg");}
 #banner-bg-2 {background-image: url("./img/2-Hero.svg");}
 #banner-bg-3 {background-image: url("./img/3-Hero.svg");}
@@ -391,13 +399,24 @@ div[id*='banner-bg-'] {
 #banner-bg-5 {background-image: url("./img/5-Hero.svg");}
 #banner-bg-6 {background-image: url("./img/6-Hero.svg");}
 
+.animated-left{
+    position: relative;
+    left: -400px;
+}
+
+.animated-right{
+    position: relative;
+    left: 400px;
+}
+
+
+
 .scene1{
     overflow: hidden;    
 }
 
 .scene1 div svg{
     width: 100vw;
-
 }
 
 .stat-bg{
@@ -767,23 +786,7 @@ div[id*='banner-bg-'] {
         padding: 0.5rem;
     }
 
-    .rowDisplay {
-        flex-direction: column;
-        margin: 2rem;
-    }
 
-    .rowDisplay2 {
-        flex-direction: column;
-        margin: 2rem;
-    }
-
-    .rowDisplay-A {
-        width: 100%;
-    }
-
-    .rowDisplay-B {
-        width: 100%;
-    }
 }
 /* Large screens */
 @media only screen and (min-width: 600px){
@@ -811,30 +814,6 @@ div[id*='banner-bg-'] {
 
     .nav-link svg {
         margin: 0 1.25rem;
-    }
-
-    .rowDisplay {  
-        max-width: 50vw;
-        min-height: 30vh;
-        margin: 2rem 5rem 2rem 2rem;
-    }
-
-    .rowDisplay2 {
-        max-width: 50vw;
-        min-height: 30vh;
-        margin: 2rem 2rem 2rem 5rem;
-    }
-
-    .rowDisplay-A {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        width: 50%;
-    }
-
-    .rowDisplay-B {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        width: 50%;
     }
 
 }
