@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="linear-gradient" x1="960" y1="844.92" x2="960" y2="387.88" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="960" y1="1082.18" x2="960" y2="387.88" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#675f6c"/>
       <stop offset="1" stop-color="#353745"/>
     </linearGradient>
   </defs>
   <g id="hero">
-    <polygon id="bg3" points="1193.39 819.36 1193.39 387.88 1038.83 387.88 986.78 484.92 982.96 819.36 747.52 819.36 753.57 650.05 731.26 566.71 566.52 544.95 566.52 478.66 554.52 463.53 502.87 463.53 502.74 468.75 454.87 468.75 454.87 530.2 233.52 500.97 203.85 819.36 0 819.36 0 844.92 1920 844.92 1920 819.36 1193.39 819.36" fill="url(#linear-gradient)"/>
+    <polygon id="bg3" points="1193.39 819.36 1193.39 387.88 1038.83 387.88 986.78 484.92 982.96 819.36 747.52 819.36 753.57 650.05 731.26 566.71 566.52 544.95 566.52 478.66 554.52 463.53 502.87 463.53 502.74 468.75 454.87 468.75 454.87 530.2 233.52 500.97 203.85 819.36 0 819.36 0 1082.18 1920 1082.18 1920 819.36 1193.39 819.36" fill="url(#linear-gradient)"/>
   </g>
 </svg>
