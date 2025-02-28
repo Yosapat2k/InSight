@@ -58,24 +58,41 @@ animatedElements.forEach((element)=> {
     duration: 0.5,
   });
 });
-//smooth scroll
-// Initialize Lenis
-const lenis = new Lenis({
-  autoRaf: true,
+
+// //smooth scroll
+// // Initialize Lenis
+// const lenis = new Lenis({
+//   autoRaf: true,
+// });
+
+// // Listen for the scroll event and log the event data
+// lenis.on('scroll', (e) => {
+//   console.log(e);
+// });
+
+// // Use requestAnimationFrame to continuously update the scroll
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
+
+// requestAnimationFrame(raf);
+
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
 });
 
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
 
-// Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
 
 
 
@@ -99,39 +116,7 @@ requestAnimationFrame(raf);
   //     duration: 2
   //   })
   // })
-
-//Animation Lenis//
-// const entries = document.querySelectorAll('.entry')
-
-// entries.forEach(entry => {
-//   let entryLeft = entry.querySelector('.anim-left')
-//   let entryRight = entry.querySelector('.anim-right')
-
-//   gsap.set(entryLeft, {
-//     xPercent: -100,
-//     opacity: 0
-//   })
-//   gsap.set(entryRight, {
-//     xPercent: 100,
-//     opacity: 0
-//   })
-
-
   
-//   // gsap.to(entryLeft, {
-//   //   scrollTrigger:{
-//   //     trigger: entry,
-//   //     start: 'top bottom',
-//   //     end: 'bottom 90%',
-//   //     scrub: true,
-//   //   },
-//   //   xPercent: 0,
-//   //   opacity: 1
-//   // })
-// })
-
-
-
 //Animations//
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach((entry) => {
