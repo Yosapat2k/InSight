@@ -246,6 +246,7 @@ main {
 }
 
 .logo span {
+    font-weight: bold;
     font-size: 2rem;
     letter-spacing: 0.1ch;
 }
@@ -281,9 +282,9 @@ main {
 
 .link-text {
     font-size: 1rem;
-    white-space: nowrap;   
+    white-space: nowrap;
     margin-left: 1rem;
-    font-weight: bold;
+    font-weight: 400;
     letter-spacing: 0.1ch;
     transition-delay: 200ms;
     visibility: hidden;
@@ -474,6 +475,7 @@ div[id*='banner-bg-'] {
     margin-bottom: 300px;
     display: grid;
     position: relative;
+    overflow: hidden;
 }
 
 .item-card{
