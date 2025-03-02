@@ -28,7 +28,7 @@
 }
 
 .hidden {
-    transform: translateX(100vw);
+    transform: translateX(500vw);
     transition: transform 0.6s;
 }
 
@@ -569,7 +569,7 @@ div[id*='banner-bg-'] {
     top: 0%;
     bottom: 0%;
     left: auto;
-    right: 0%;
+    right: auto;
     overflow: auto;
 }
 
@@ -683,6 +683,7 @@ div[id*='banner-bg-'] {
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
 }
 
 .CVD1 {
@@ -976,6 +977,10 @@ div[id*='banner-bg-'] {
         overflow: hidden;
     }
 
+    .item-content {
+        width: 100vw;
+    }
+    
     .item-back {
         width: 100vw;
         height: 6vh;
@@ -988,7 +993,7 @@ div[id*='banner-bg-'] {
         left: 0%;
         right: 0%;
     }
-
+    
     .items-info {
         margin-top: 10rem;
     }
