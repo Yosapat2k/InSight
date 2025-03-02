@@ -1,3 +1,17 @@
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
 //Slide left//
 
 const animatedLeft = document.querySelectorAll('.animated-left');
@@ -12,8 +26,8 @@ animatedLeft.forEach((element)=> {
       toggleActions: 'play none none reverse'
     }
   });
-  tl.to(element,{
-    x: 400
+  tl.from(element,{
+    x: -400
   });
 });
 
@@ -31,12 +45,10 @@ animatedRight.forEach((element)=> {
       toggleActions: 'play none none reverse'
     }
   });
-  tl.to(element,{
-    x: -400
+  tl.from(element,{
+    x: 400
   });
 });
-
-
 
 //Fade in bottom//
 const animatedElements = document.querySelectorAll('.animated-element');
@@ -48,7 +60,6 @@ animatedElements.forEach((element)=> {
       start: 'top 80%',
       end: 'top 20%',
       toggleActions: 'play none none reverse',
-      markers: false,
     },
   });
 
@@ -77,23 +88,6 @@ animatedElements.forEach((element)=> {
 // }
 
 // requestAnimationFrame(raf);
-
-// Initialize a new Lenis instance for smooth scrolling
-const lenis = new Lenis();
-
-// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-lenis.on('scroll', ScrollTrigger.update);
-
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
-});
-
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
-gsap.ticker.lagSmoothing(0);
-
-
 
 
 //Parallax//
