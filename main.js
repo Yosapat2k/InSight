@@ -12,6 +12,10 @@ gsap.ticker.add((time) => {
 
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
+
+
+
+
 //Slide left//
 
 const animatedLeft = document.querySelectorAll('.animated-left');
@@ -70,25 +74,61 @@ animatedElements.forEach((element)=> {
   });
 });
 
-// //smooth scroll
-// // Initialize Lenis
-// const lenis = new Lenis({
-//   autoRaf: true,
-// });
+//Click Reveal//
+//close content window//
+var userBack = document.getElementsByClassName('item-back')[0];
+var reveal = document.getElementById('item-details');
 
-// // Listen for the scroll event and log the event data
-// lenis.on('scroll', (e) => {
-//   console.log(e);
-// });
+userBack.addEventListener('click', function() {
+  reveal.classList.toggle('show');
+});
 
-// // Use requestAnimationFrame to continuously update the scroll
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
+//close all items window//
+
+// var userReveal = document.getElementsByClassName('items-info');
+// for(var i = 0; i < userSelection.length; i++) {
+//   (function(index) {
+//     userSelection[index].addEventListener("click", function() {
+//       reveal.classList.toggle('show');
+//      })
+//   })(i);
 // }
 
-// requestAnimationFrame(raf);
 
+//show content window//
+var userSelection = document.getElementsByClassName('item-card');
+
+for(var i = 0; i < userSelection.length; i++) {
+  (function(index) {
+    userSelection[index].addEventListener("click", function() {
+      reveal.classList.toggle('show');
+     })
+  })(i);
+}
+
+var Topic1 = document.getElementsByClassName('topic1');
+var Topic1Reveal = document.getElementById('item1-info');
+
+for(var i = 0; i <Topic1.length; i++) {
+  (function(index) {
+    Topic1[index].addEventListener("click", function() {
+      Topic1Reveal.classList.toggle('show2');
+     })
+  })(i);
+}
+
+//   function viewContent(el) {
+//   var viewItem = document.getElementById(el);
+//   if (viewItem.style.display === "none") {
+//     viewItem.style.display = "none";
+//   }
+//   if (viewItem.style.display === "block"){
+//     viewItem.style.display = "none";
+//   }
+//   else {
+//     viewItem.style.display = "block";
+//   }
+// }
 
 //Parallax//
   // const bannerWrapper = document.querySelector('#banner-wrapper')
