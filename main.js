@@ -74,7 +74,7 @@ animatedElements.forEach((element)=> {
     scrollTrigger: {
       trigger: element,
       start: '-150rem 80%',
-      end: '-100rem 60%',
+      end: '-200rem 60%',
       // toggleActions: 'play none none reverse',
       markers: false,
       scrub: true
@@ -96,6 +96,7 @@ var reveal = document.getElementById('item-details');
 userBack.addEventListener('click', function() {
   reveal.classList.toggle('show');
 });
+
 
 //close all items window//
 
@@ -130,6 +131,64 @@ for(var i = 0; i <Topic1.length; i++) {
      })
   })(i);
 }
+
+var Topic2 = document.getElementsByClassName('topic2');
+var Topic2Reveal = document.getElementById('item2-info');
+
+for(var i = 0; i <Topic1.length; i++) {
+  (function(index) {
+    Topic2[index].addEventListener("click", function() {
+      Topic2Reveal.classList.toggle('show2');
+     })
+  })(i);
+}
+
+var Topic3 = document.getElementsByClassName('topic3');
+var Topic3Reveal = document.getElementById('item3-info');
+
+for(var i = 0; i <Topic1.length; i++) {
+  (function(index) {
+    Topic3[index].addEventListener("click", function() {
+      Topic3Reveal.classList.toggle('show2');
+     })
+  })(i);
+}
+
+var Topic4 = document.getElementsByClassName('topic4');
+var Topic4Reveal = document.getElementById('item4-info');
+
+for(var i = 0; i <Topic1.length; i++) {
+  (function(index) {
+    Topic4[index].addEventListener("click", function() {
+      Topic4Reveal.classList.toggle('show2');
+     })
+  })(i);
+}
+
+var Topic5 = document.getElementsByClassName('topic5');
+var Topic5Reveal = document.getElementById('item5-info');
+
+for(var i = 0; i <Topic1.length; i++) {
+  (function(index) {
+    Topic5[index].addEventListener("click", function() {
+      Topic5Reveal.classList.toggle('show2');
+     })
+  })(i);
+}
+
+//Dragging//
+gsap.registerPlugin(Draggable);
+
+Draggable.create(".color-item", {
+  bounds: ".container"
+});
+
+var CVDsim = document.getElementById('scene3-button');
+var CVDoff = document.getElementById('CVDon');
+
+CVDsim.addEventListener('click', function() {
+  CVDoff.classList.toggle('CVDfilter');
+});
 
 //   function viewContent(el) {
 //   var viewItem = document.getElementById(el);
