@@ -7,13 +7,23 @@ lenis.on('scroll', ScrollTrigger.update);
 // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
 // This ensures Lenis's smooth scroll animation updates on each GSAP tick
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+  lenis.raf(time * 1500); // Convert time from seconds to milliseconds
 });
 
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
 
 
+//Click to Scroll//
+gsap.registerPlugin(ScrollToPlugin)
+console.clear();
+document.querySelector("#scene1-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 0.75, scrollTo: ".scene1" });
+});
+console.clear();
+document.querySelector("#scene2-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 0.75, scrollTo: ".suggestions-body" });
+});
 
 
 //Slide left//
@@ -25,9 +35,10 @@ animatedLeft.forEach((element)=> {
     scrollTrigger: {
       trigger: element,
       start: 'top 80%',
-      end: '50% 50%',
+      end: '50% 60%',
       markers: false,
-      toggleActions: 'play none none reverse'
+      // toggleActions: 'play none none reverse'
+      scrub: true
     }
   });
   tl.from(element,{
@@ -44,9 +55,10 @@ animatedRight.forEach((element)=> {
     scrollTrigger: {
       trigger: element,
       start: 'top 80%',
-      end: '50% 50%',
+      end: '50% 60%',
       markers: false,
-      toggleActions: 'play none none reverse'
+      // toggleActions: 'play none none reverse'
+      scrub: true
     }
   });
   tl.from(element,{
@@ -61,9 +73,11 @@ animatedElements.forEach((element)=> {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: element,
-      start: 'top 80%',
-      end: 'top 20%',
-      toggleActions: 'play none none reverse',
+      start: '-40rem 80%',
+      end: '-100rem 60%',
+      // toggleActions: 'play none none reverse',
+      markers: false,
+      scrub: true
     },
   });
 

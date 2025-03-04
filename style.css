@@ -50,11 +50,11 @@
 
 @keyframes fade-in {
     from {
-        scale: .8;
+        transform: translateY(20rem);
         opacity: 0;
     }
     to {
-        scale: 1;
+        transform: translateY(0rem);
         opacity: 1
     }
 }
@@ -101,12 +101,30 @@
     }
 }
 
-@keyframes beep {
+@keyframes beepRed {
     45%, 90% {
+        fill: var(--reddark);
+    }
+    50%, 85% {
         fill: var(--redstandard);
+    }
+}
+
+@keyframes beepYellow {
+    45%, 90% {
+        fill: var(--yellowdark);
     }
     50%, 85% {
         fill: var(--yellowstandard);
+    }
+}
+
+@keyframes beepGreen {
+    45%, 90% {
+        fill: var(--greendark);
+    }
+    50%, 85% {
+        fill: var(--greenstandard);
     }
 }
 
@@ -119,12 +137,12 @@
     }
 }
 
-@keyframes extend {
-
-}
-
 .slideInLeft {
     animation: slideInLeft ease-in;
+}
+
+.fade-in {
+    animation: fade-in ease 1s;
 }
 
 .in-view {
@@ -147,12 +165,27 @@
     animation: beep ease 4s;
 }
 
+.beepRed {
+    animation: beepRed ease 4s;
+}
+
+.beepYellow {
+    animation: beepYellow ease 4s;
+    animation-delay: 2s;
+}
+
+.beepGreen {
+    animation: beepGreen ease 4s;
+    animation-delay: 1s;
+}
+
 .beepBlack {
     animation: beepBlack ease 8s;
 }
 
 
 /* Sytling */
+
 
 :root {
     font-size: 18px;
@@ -162,9 +195,13 @@
     --text-whitealt: #bcbec0;
     --transition-speed: 600ms;
     --redstandard: #e13232;
-    --greenstandard: #00a14b;
+    --reddark: #9a1d27;
+    --greenstandard: #49b848;
+    --greendark: #2a6a31;
     --yellowstandard: #f5c217;
+    --yellowdark: #9c7c26;
     --bluestandard: #1B75BB;
+    --bluelight: #67a9c1;
     --orangestandard: #f47e2e;
     --new-bg-primary: #212333;
     --new-bg-secondary: #373B5A;
@@ -399,12 +436,16 @@ div[id*='banner-bg-'] {
 #banner-bg-5 {background-image: url("./img/5-Hero.svg");}
 #banner-bg-6 {background-image: url("./img/6-Hero.svg");}
 
+.scene1-bg{
+    background-color: var(--bluelight);
+}
+
 .scene1{
     overflow: hidden;    
 }
 
 .scene1 div svg{
-    width: 100vw;
+    width: 105vw;
 }
 
 .stat-bg{
@@ -651,19 +692,19 @@ div[id*='banner-bg-'] {
 }
 
 #item4{
-    grid-area: 3 / 2 / 4 / 5;
+    grid-area: span 2 / span 2 / span 2 / span 2;
 }
 
 #item5{
-    grid-area: span 2 / span 3 / span 2 / span 3;
+    grid-area: span 2 / span 2 / span 2 / span 2;
 }
 
 #item6{
-    grid-area: span 2 / span 2 / span 2 / span 2;
+    grid-area: span 2 / span 3 / span 2 / span 3;
 }
 
 #item7{
-    grid-area: span 2 / span 2 / span 2 / span 2;
+    grid-area: span 2 / span 5 / span 2 / span 2;
 }
 
 #item8{
