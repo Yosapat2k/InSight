@@ -344,6 +344,12 @@
         <div class="scene1 scene1-bg">
             <div class="scene-wrapper">
               <svg id="scene1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+                <defs>
+                  <linearGradient id="pole_swatch" data-name="pole swatch" x1="1684.87" y1="1080" x2="1684.87" y2="10.99" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#67a9c1"/>
+                    <stop offset="0.51" stop-color="#212333"/>
+                  </linearGradient>
+                </defs>
                 <rect id="scene-bg" y="5.55" width="1920" height="1080" fill="#67a9c1"/>
                 <g id="trafficbox" class="animated-element animated-right">
                   <path d="M1477,244.54s8.13,0,12.8,45.59,51,565.6,40.37,587c-24.74,18.52-155.68,79.39-162,71.67-7.2-8.8-28.07-19.78-50.71-28.65-14.27-5.59-18.25-588.31-18.25-588.31l106.43-123.87Z" fill="#323335"/>
@@ -354,7 +360,7 @@
                   <path d="M1434.45,632.8l187.44-90.68-2.09,30.45-171.33,78.84S1424.89,652.14,1434.45,632.8Z" fill="#353745"/>
                   <path d="M1414.87,410.12l180.78-103.31v30.52l-165.52,90.4S1406.65,430.07,1414.87,410.12Z" fill="#353745"/>
                 </g>
-                <polygon class="animated-element animated-right" id="pole" points="1554.57 48.55 1664.91 1085.55 1815.17 1085.55 1660.22 10.99 1554.57 48.55" fill="#212333"/>
+                <polygon class="animated-element animated-right" id="pole" points="1554.57 48.36 1664.91 1080 1815.17 1080 1660.22 10.99 1554.57 48.36" fill="url(#pole_swatch)"/>
                 <path id="top-bg" d="M1920,118.07S1429,183.7,960,183.7,0,118.07,0,118.07V-6.48H1920Z" fill="#1c1a24"/>
                 <g id="redlight" class="animated-element">
                   <path id="redhood2" d="M1237.13,390.32S1144.48,305,1088.65,257.51c-5.74-4.7-5.22-53.74-5.22-53.74s50.33-80.66,93.14-69.52c0,0,138.52,62.21,155.73,91.43s-58.43,133.05-58.43,133.05Z" fill="#212333"/>
@@ -407,11 +413,7 @@
         <section class="scene1-bg">
             <div class="griddisplay">
               <div id="item1" class="item-card animated-element animated-left topic1">
-                <img class="item-thumb" src="img/cvd01.jpg">
-                <div class="card-info">
-                  <h4>ภัยอันตรายบนท้องถนน?</h4>
-                  <p>การสอบใบขับขี่ต้องผ่านการทดสอบตาบอดสีก่อน</p>
-                </div>
+                <img class="item-thumb" src="img/cvd01a.jpg">
                 <svg class="button-view" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.41 295.41">
                   <g id="Layer_5" data-name="Layer 5">
                     <path d="M295.42,147.7A147.71,147.71,0,0,1,43.25,252.15a147.71,147.71,0,0,1,208.9-208.9A146.72,146.72,0,0,1,295.42,147.7Z" fill="#1d1a24"/>
@@ -458,7 +460,7 @@
                   </g>
                 </svg>
               </div> -->
-              <div id="item4" class="item-card animated-element">
+              <div id="item4" class="item-card animated-element animated-right">
                 <img class="item-thumb" src="img/cvd11.jpg">
                 <svg class="button-view" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.41 295.41">
                   <g id="Layer_5" data-name="Layer 5">
@@ -494,7 +496,7 @@
                   </g>
                 </svg>
               </div>
-              <div id="item6" class="item-card animated-element">
+              <div id="item6" class="item-card animated-element animated-right">
                 <img class="item-thumb" src="img/cvd04.jpg">
                 <div class="card-info">
                   <h4>ความใฝ่ฝัน</h4>
@@ -514,7 +516,7 @@
                   </g>
                 </svg>
               </div>
-              <div id="item7" class="item-card animated-element animated-left">
+              <div id="item7" class="item-card animated-element">
                 <img class="item-thumb" src="img/cvd08.jpg">
                 <div class="card-info">
                   <h4>ผู้ที่สังคมละเลย</h4>

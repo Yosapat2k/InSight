@@ -73,7 +73,7 @@ animatedElements.forEach((element)=> {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: element,
-      start: '-40rem 80%',
+      start: '-150rem 80%',
       end: '-100rem 60%',
       // toggleActions: 'play none none reverse',
       markers: false,
