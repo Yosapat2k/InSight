@@ -185,9 +185,11 @@ Draggable.create(".color-item", {
 
 var CVDsim = document.getElementById('scene3-button');
 var CVDoff = document.getElementById('CVDon');
+var CVDoff2 = document.getElementById('CVDgame');
 
 CVDsim.addEventListener('click', function() {
   CVDoff.classList.toggle('CVDfilter');
+  CVDoff2.classList.toggle('CVDfilter');
 });
 
 //   function viewContent(el) {
