@@ -166,17 +166,17 @@
 }
 
 .beepRed {
-    animation: beepRed ease 4s;
+    animation: beepRed ease 3s;
 }
 
 .beepYellow {
-    animation: beepYellow ease 4s;
-    animation-delay: 2s;
+    animation: beepYellow ease 3s;
+    animation-delay: 1s;
 }
 
 .beepGreen {
-    animation: beepGreen ease 4s;
-    animation-delay: 1s;
+    animation: beepGreen ease 3s;
+    animation-delay: 2s;
 }
 
 .beepBlack {
@@ -216,7 +216,7 @@ body {
     color: var(--text-primary);
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -407,12 +407,7 @@ p {
 }
 
 #hero svg{
-    width: 100vw;
-}
-
-#eyes, #eyes svg {
-    position: absolute;
-    width: 17.27%;
+    display: block;
 }
 
 #banner-wrapper{
@@ -450,7 +445,7 @@ div[id*='banner-bg-'] {
 }
 
 .scene1 div svg{
-    width: 105vw;
+    display: block;
 }
 
 .stat-bg{
@@ -635,8 +630,6 @@ div[id*='banner-bg-'] {
     width: 95vw;
     background-color: var(--new-bg-primary);
     border-radius: 0;
-    justify-content: space-around;
-    padding: 12px 12px 3rem;
     display: flex;
     position: absolute;
     top: 0%;
@@ -648,7 +641,6 @@ div[id*='banner-bg-'] {
 
 .items-info {
     width: 100%;
-    margin-left: 5rem;
     margin-top: 5rem;
     display: none;
 }
@@ -657,9 +649,82 @@ div[id*='banner-bg-'] {
     display: block;
 }
 
-.item-p {
-    padding-right: 20rem;
+.item-gfx {
+    display: flex;
+    margin-left: 3rem;
 }
+
+.item-gfx-card {
+    margin: 1rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    background-color: var(--purple-black);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 2px solid var(--purple-black);
+    transition: all ease-in-out 0.5s;
+    overflow-x: hidden;
+}
+
+.item-gfx-card:hover , .item-gfx-card:active {
+    border: 2px solid var(--text-whitealt);
+}
+
+.item-gfx-card h3, .item-gfx-card p {
+    text-align: center;
+}
+
+.item-gfx-card h3 {
+    color: var(--new-primary);
+}
+
+.item-gfx-card svg {
+    width: 100%;
+}
+
+.item-p {
+    background-color: var(--new-primary);
+    display: flex;
+    padding: 10rem;
+    flex-direction: column;
+}
+
+.item-p h2 {
+    color: var(--new-bg-primary);
+    margin: 2rem;
+}
+
+.item-p h3 {
+    color: var(--new-bg-secondary);
+}
+
+.item-p-card img{
+    height: 20rem;
+}
+
+.item-p-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggest-title {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.suggest-title h3{
+    color: var(--new-bg-primary);
+}
+
+.extender-yellow {
+    display: block;
+}
+
 
 .items{
     margin-bottom: 2rem;
@@ -668,25 +733,21 @@ div[id*='banner-bg-'] {
 .item1-hero {
     width: 100%;
     display: flex;
-    flex-direction: row;
-}
-
-.item1-text {
-    margin-left: 2rem;
-    padding-right: 10rem;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bigText{
-    color: var(--new-primary);
     font-family: prompt;
     font-weight: bold;
     font-size: 6rem;
+    margin-left: 3rem;
 }
 
-.traffic {
-    min-width: 10rem;
-    max-width: 10rem;
+.blueHL {
+    color: var(--bluelight);
 }
+
 
 #item1{
     grid-area: span 2 / span 3 / span 2 / span 3;
@@ -1249,29 +1310,40 @@ div[id*='banner-bg-'] {
         margin-top: 10rem;
     }
 
-    .item1-text {
-        margin-left: 2rem;
-        padding-right: 5rem;
-    }
-    
-    .item1-text h2 {
-        font-size: 1.5rem;
+    .item-gfx {
+        flex-direction: column;
+        margin-left: auto;
+        justify-content: center;
     }
 
-    .bigText{
-        color: var(--new-primary);
-        font-family: prompt;
-        font-weight: bold;
-        font-size: 2.5rem;
-    }
-
-    .traffic {
-        min-width: 6.5rem;
-        max-width: 6.5rem;
+    .item-gfx-card {
+        width: auto;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        justify-content: center;
     }
 
     .item-p {
-        padding-right: 5rem;
+        padding: 0;
+    }
+
+    .item-p h2{
+        text-align: center;
+    }
+
+    .item-p h3{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .item-p-card {
+        flex-direction: column;
+    }
+
+    .bigText{
+        font-size: 2.5rem;
+        margin-left: auto;
+        text-align: center;
     }
 
     #item2 {
@@ -1357,6 +1429,8 @@ div[id*='banner-bg-'] {
         height: 50%;
         margin-right: 0;
     }
+
+
 }
 /* Large screens */
 @media only screen and (min-width: 600px){
@@ -1390,4 +1464,7 @@ div[id*='banner-bg-'] {
         min-height: 100dvh;
     }
 
+    .item-gfx-card:hover , .item-gfx-card:active {
+        width: 30rem;
+    }
 }

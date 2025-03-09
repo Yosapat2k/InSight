@@ -7,7 +7,7 @@ lenis.on('scroll', ScrollTrigger.update);
 // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
 // This ensures Lenis's smooth scroll animation updates on each GSAP tick
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1500); // Convert time from seconds to milliseconds
+  lenis.raf(time * 2000); // Convert time from seconds to milliseconds
 });
 
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
@@ -85,6 +85,25 @@ animatedElements.forEach((element)=> {
     opacity: 0,
     y: 50,
     duration: 0.5,
+  });
+});
+
+//Fade in bottom//
+const animatedDrive = document.querySelectorAll('.animated-drive');
+
+animatedDrive.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+      end: '50% 60%',
+      markers: true,
+      // toggleActions: 'play none none reverse'
+      scrub: true
+    }
+  });
+  tl.from(element,{
+    x: -4000
   });
 });
 
@@ -181,6 +200,10 @@ gsap.registerPlugin(Draggable);
 
 Draggable.create(".color-item", {
   bounds: ".container"
+});
+
+Draggable.create(".spin", {
+  type: "rotation",
 });
 
 var CVDsim = document.getElementById('scene3-button');
