@@ -245,6 +245,8 @@ main {
 .white-bg2{
     background-color: var(--text-primary);
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .white-bg p {
@@ -252,6 +254,10 @@ main {
 }
 
 /* Navbar */
+
+#return-button {
+    cursor: pointer;
+}
 
 .navbar {
    position: fixed;
@@ -295,6 +301,7 @@ main {
 
 .nav-item {
     width: 100%;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -903,10 +910,8 @@ div[id*='banner-bg-'] {
 
 .container {
     position: relative;
-    width: 40vw;
+    width: 50vw;
     height: 60vh;
-    max-width: 40vw;
-    max-height: 60vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -967,10 +972,12 @@ div[id*='banner-bg-'] {
 
 .CVD-title h3{
     color: var(--new-bg-primary);
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .color1 {
-    background-color: var(--redstandard);
+    background-color: #f64242;
 }
 
 .color2 {
@@ -982,7 +989,7 @@ div[id*='banner-bg-'] {
 }
 
 .color4 {
-    background-color: var(--greenstandard);
+    background-color: #40d039;
 }
 
 .color5 {
@@ -1412,9 +1419,7 @@ div[id*='banner-bg-'] {
 
     .container {
         width: 80%;
-        height: 60vh;
-        max-width: 80%;
-        max-height: 60vh;
+        height: 50vh;
     }
 
     .color-item {
@@ -1467,4 +1472,10 @@ div[id*='banner-bg-'] {
     .item-gfx-card:hover , .item-gfx-card:active {
         width: 30rem;
     }
-}
+
+    .white-bg2{
+         margin-left: 5rem;
+    }
+
+    }
+   

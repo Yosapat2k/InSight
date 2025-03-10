@@ -24,6 +24,26 @@ console.clear();
 document.querySelector("#scene2-button").addEventListener("click", function() {
   gsap.to(window, { duration: 0.75, scrollTo: ".suggestions-body" });
 });
+console.clear();
+document.querySelector("#return-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 1, scrollTo: "#hero" });
+});
+console.clear();
+document.querySelector("#part1-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 1, scrollTo: ".scene1" });
+});
+console.clear();
+document.querySelector("#game-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 1, scrollTo: ".CVD-title" });
+});
+console.clear();
+document.querySelector("#part2-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 1, scrollTo: ".suggestions" });
+});
+console.clear();
+document.querySelector("#message-button").addEventListener("click", function() {
+  gsap.to(window, { duration: 1, scrollTo: ".app-container" });
+});
 
 
 //Slide left//
