@@ -34,7 +34,7 @@ document.querySelector("#part1-button").addEventListener("click", function() {
 });
 console.clear();
 document.querySelector("#game-button").addEventListener("click", function() {
-  gsap.to(window, { duration: 1, scrollTo: ".CVD-title" });
+  gsap.to(window, { duration: 1, scrollTo: ".CVD-game-wrapper" });
 });
 console.clear();
 document.querySelector("#part2-button").addEventListener("click", function() {
