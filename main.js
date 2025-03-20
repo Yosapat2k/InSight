@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();
 
@@ -34,7 +35,7 @@ document.querySelector("#part1-button").addEventListener("click", function() {
 });
 console.clear();
 document.querySelector("#game-button").addEventListener("click", function() {
-  gsap.to(window, { duration: 1, scrollTo: ".CVD-game-wrapper" });
+  gsap.to(window, { duration: 1, scrollTo: "#CVDgame" });
 });
 console.clear();
 document.querySelector("#part2-button").addEventListener("click", function() {
@@ -115,15 +116,59 @@ animatedDrive.forEach((element)=> {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: element,
-      start: 'top 80%',
-      end: '50% 60%',
-      markers: true,
-      // toggleActions: 'play none none reverse'
-      scrub: true
+      start: 'top 20%',
+      end: 'bottom 60%',
+      markers: false,
+      toggleActions: 'play none none reverse'
     }
   });
   tl.from(element,{
-    x: -4000
+    x: -2000,
+    duration: 1
+  });
+  tl.to(element,{
+    x: 2000,
+    duration: 1
+  });
+});
+
+//BG White//
+const animatedBG = document.querySelectorAll('.animated-BG');
+
+animatedBG.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: '15% 20%',
+      end: 'bottom 60%',
+      markers: false,
+      toggleActions: 'play none none reverse'
+    }
+  });
+  tl.to(element,{
+    duration: 0.5,
+    backgroundColor: '#f0f0f0',
+    ease: "none"
+  });
+});
+
+//BG Yellow//
+const animatedBGyellow = document.querySelectorAll('.animated-BGyellow');
+
+animatedBGyellow.forEach((element)=> {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: '40% 50%',
+      end: 'bottom 60%',
+      markers: false,
+      toggleActions: 'play none none reverse'
+    }
+  });
+  tl.to(element,{
+    duration: 0.5,
+    backgroundColor: '#F4C21B',
+    ease: "none"
   });
 });
 
@@ -247,42 +292,21 @@ CVDsim.addEventListener('click', function() {
 //     viewItem.style.display = "block";
 //   }
 // }
-
-//Parallax//
-  // const bannerWrapper = document.querySelector('#banner-wrapper')
-  // const bannerBG = document.querySelector('div[id*="banner-bg-"]')
-
-  // const tl = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: bannerWrapper,
-  //     start: 'top top',
-  //     scrub: true
-  //   }
-  // })
-
-  // bannerBG.forEach(bg => {
-  //   const bgSpeed = bg.getAttribute('data-speed')
-
-  //   tl.to(bg, {
-  //     y: 60 * bgSpeed,
-  //     duration: 2
-  //   })
-  // })
   
 //Animations//
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach((entry) => {
 //     console.log(entry)
 //     if (entry.isIntersecting) {
-//         entry.target.classList.add('show');
+//         entry.target.classList.add('itemBGyellow');
 //     } else {
-//         entry.target.classList.remove('show');
+//         entry.target.classList.remove('itemBGyellow');
 //     }
 //   });
 // });
 
 
-// const hiddenElments = document.querySelectorAll('.hidden');
+// const hiddenElments = document.querySelectorAll('.itemBG');
 // hiddenElments.forEach((el) => observer.observe(el));
 
 //Chatbox App New //
