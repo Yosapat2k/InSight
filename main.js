@@ -39,7 +39,7 @@ document.querySelector("#game-button").addEventListener("click", function() {
 });
 console.clear();
 document.querySelector("#part2-button").addEventListener("click", function() {
-  gsap.to(window, { duration: 1, scrollTo: ".suggestions" });
+  gsap.to(window, { duration: 1, scrollTo: "#suggest" });
 });
 console.clear();
 document.querySelector("#message-button").addEventListener("click", function() {
