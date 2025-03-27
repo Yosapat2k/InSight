@@ -4,7 +4,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Mitr:wght@200;300;400;500;600;700&family=Quintessential&display=swap');
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
 /* Utiliy Classes */
+
 
 .filterCVD:hover, .filterCVD:active {
     filter: url('./emulator/filters.svg#protannopia');
@@ -46,6 +65,16 @@
 @keyframes slideInLeft {
     from {
         transform: translateX(-20rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100rem);
     }
 
     to {
@@ -160,6 +189,10 @@
 
 .slideInLeft {
     animation: slideInLeft ease-in;
+}
+
+.slideInRight {
+    animation: slideInRight ease 1s;
 }
 
 .fade-in {
@@ -286,7 +319,7 @@ main {
 
 .navbar {
    position: fixed;
-   background-color: var(--new-bg-secondary);
+   background-color: var(--new-bg-primary);
    transition: width 200ms ease;
    z-index: 1;
 }
@@ -305,7 +338,7 @@ main {
     margin-bottom: 1rem;
     text-align: center;
     color: var(--text-primary);
-    background: var(--new-bg-primary);
+    background: var(--purple-black);
     width: 100%;
 }
 
@@ -341,8 +374,8 @@ main {
 
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: var(--new-bg-primary);
-    color: var(--new-primary);
+    background: var(--new-bg-secondary);
+    color: var(--yellowstandard);
 }
 
 .link-text {
@@ -436,11 +469,8 @@ p {
 #hero {
     padding: 0;
     position: relative;
-    background-color: var(--purple-black);
-}
-
-#hero svg{
-    display: block;
+    height: 100dvh;
+    overflow: hidden;
 }
 
 #banner-wrapper{
@@ -453,7 +483,7 @@ p {
 div[id*='banner-bg-'] {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
+    background-position: top center;
     width: 100%;
     height: 100dvh;
     position: absolute;
@@ -468,6 +498,7 @@ div[id*='banner-bg-'] {
 #banner-bg-4 {background-image: url("./img/4-Hero.svg");}
 #banner-bg-5 {background-image: url("./img/5-Hero.svg");}
 #banner-bg-6 {background-image: url("./img/6-Hero.svg");}
+#banner-bg-7 {background-image: url("./img/7-Hero.svg");}
 
 .scene1-bg{
     background-color: var(--bluelight);
@@ -589,7 +620,7 @@ div[id*='banner-bg-'] {
     left: 0%;
     right: 0%;
     overflow: hidden;
-    transition: all 2s;
+    transition: transform 2s;
 }
 
 .card-info {
@@ -646,7 +677,8 @@ div[id*='banner-bg-'] {
     bottom: 0%;
     left: auto;
     right: auto;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: scroll;
 }
 
 .item-back {
@@ -715,7 +747,7 @@ div[id*='banner-bg-'] {
     border-radius: 1rem;
     padding: 1.5rem;
     border: 2px solid var(--purple-black);
-    transition: all ease-in-out 0.5s;
+    transition: transform ease-in-out 0.5s, border ease-in-out 0.5s;
     overflow-x: hidden;
 }
 
@@ -1495,19 +1527,16 @@ div[id*='banner-bg-'] {
     resize: none;
 }
 
-.add-note {
-    font-family: Sarabun;    
-    font-size: large;
+.add-note {   
     padding-bottom: 2rem;
     width: 20rem;
     height: 20rem;
-    border: none;
     outline: none;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
     font-size: 10rem;
     cursor: pointer;
-    color: var(--new-bg-primary);
+    color: var(--text-whitealt);
     transition: background-color var(--transition-speed);
 }
 
@@ -1527,16 +1556,6 @@ div[id*='banner-bg-'] {
 @media(prefers-reduced-motion) {
     .hidden {
         transition: none;
-    }
-}
-
-@media only screen and (max-width: 479px){
-    .item-thumb {
-        height: 230px;
-    }
-
-    .suggest-img img, .suggest-img2 img{
-        height: 20rem;
     }
 }
 
@@ -1579,7 +1598,12 @@ div[id*='banner-bg-'] {
     main {
         margin: 0;
     }
-    
+
+    div[id*="banner-bg-"] {
+        height: 40dvh;
+        padding-left: 5rem;
+    }
+
     .stat-bg {
         min-height: 100dvh;
     }
@@ -1631,9 +1655,8 @@ div[id*='banner-bg-'] {
 
     .item-gfx-card {
         width: auto;
-        margin-left: 4rem;
-        margin-right: 4rem;
-        justify-content: center;
+        margin-left: 8rem;
+        margin-right: 8rem;
     }
 
     .item-p {
@@ -1793,6 +1816,22 @@ div[id*='banner-bg-'] {
     }
 }
    
+@media only screen and (max-width: 479px){
+
+    div[id*="banner-bg-"] {
+        height: 30dvh;
+        padding-left: 5rem;
+    }
+
+    .item-thumb {
+        height: 230px;
+    }
+
+    .suggest-img img, .suggest-img2 img{
+        height: 20rem;
+    }
+}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -1820,6 +1859,11 @@ div[id*='banner-bg-'] {
 
     .nav-link svg {
         margin: 0 1.25rem;
+    }
+
+    div[id*="banner-bg-"] {
+        height: 60dvh;
+        margin-left: 5rem;
     }
 
     .stat-bg {
@@ -1918,9 +1962,8 @@ div[id*='banner-bg-'] {
 
     .item-gfx-card {
         width: auto;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        justify-content: center;
+        margin-left: 8rem;
+        margin-right: 8rem;
     }
 
     .item-p-card {
@@ -2053,6 +2096,10 @@ div[id*='banner-bg-'] {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+    div[id*="banner-bg-"] {
+        height: 100dvh;
+    }
+
     .griddisplay {
         margin: 0;
         display: grid;
@@ -2067,6 +2114,12 @@ div[id*='banner-bg-'] {
         display: flex;
         margin-left: 1rem;
         flex-direction: row;
+    }
+
+    .item-gfx-card {
+        width: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .item-p {

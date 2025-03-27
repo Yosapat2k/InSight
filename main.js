@@ -1,6 +1,9 @@
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 // Initialize a new Lenis instance for smooth scrolling
-const lenis = new Lenis();
+const lenis = new Lenis({
+  prevent: (node) => node.id === 'item-details',
+}
+);
 
 // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
 lenis.on('scroll', ScrollTrigger.update);
@@ -10,6 +13,8 @@ lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => {
   lenis.raf(time * 2000); // Convert time from seconds to milliseconds
 });
+
+ScrollTrigger.normalizeScroll(false);
 
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
@@ -171,6 +176,27 @@ animatedBGyellow.forEach((element)=> {
     ease: "none"
   });
 });
+
+//Parallax
+const bannerWrapper = document.querySelector('#banner-wrapper')
+const bannerBG = bannerWrapper.querySelectorAll('div[id*="banner-bg-"]')
+
+const tl = gsap.timeline ({
+  scrollTrigger: {
+    trigger: bannerWrapper,
+    start: 'top top',
+    scrub: true
+  }
+})
+
+bannerBG.forEach(bg => {
+  const bgSpeed = bg.getAttribute('data-speed')
+
+  tl.to(bg, {
+    y: 20 * bgSpeed,
+    duration: 2
+  }, 0)
+})
 
 //Click Reveal//
 //close content window//
@@ -381,86 +407,3 @@ function deleteNote(id, element) {
   saveNotes(notes);
   notesContainer.removeChild(element);
 }
-
-
-
-// Chatbox Drag Old //
-
-let color = document.getElementById('color')
-let createBtn = document.getElementById('createBtn')
-let list = document.getElementById('list')
-
-// Creating Notes //
-createBtn.onclick = () => {
-    let newNote = document.createElement('div');
-    newNote.classList.add('note');
-    newNote.setAttribute("id", "mydiv");
-    newNote.innerHTML = `
-    <span class="close">x</span>
-    <textarea
-    placeholder="Write Content..."
-    rows="10" cols="30"></textarea>`;
-    newNote.style.borderColor = color.value;
-    list.appendChild(newNote)
-}
-
-document.addEventListener('click', (event) => {
-    if(event.target.classList.contains('close')){
-        event.target.parentNode.remove();
-    }
-})
-
-// Dragging //
-
-
-let cursor = {
-    x: null,
-    y: null
-}
-let note = {
-    dom: null,
-    x: null,
-    y: null
-}
-
-
-document.addEventListener('mousedown', (event) => {
-    if(event.target.classList.contains('note')){
-        cursor = {
-            x: event.clientX,
-            y: event.clientY
-        } 
-        note = {
-            dom: event.target,
-            x: event.target.getBoundingClientRect().left,
-            y: event.target.getBoundingClientRect().top
-        } 
-    }
-})
-
-
-document.addEventListener('mousemove', (event) => {
-    if(note.dom == null) return;
-    let currentCursor = {
-        x: event.clientX,
-        y: event.clientY
-    }
-    let distance = {
-        x: currentCursor.x - cursor.x,
-        y: currentCursor.y - cursor.y
-    }
-
-
-    note.dom.style.left = (note.x + distance.x) + 'px';
-    note.dom.style.top =  (note.y + distance.y) + 'px';
-    console.log(note.dom.offsetLeft, note.dom.offsetTop);
-    // note.dom.offsetLeft
-    // note.dom.offsetTop
-    note.dom.style.cursor = 'move';
-})
-
-document.addEventListener('mouseup', () => {
-    if( note.dom == null) return;
-    note.dom.style.cursor = 'auto';
-    note.dom = null;  
-})
