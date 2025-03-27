@@ -1,11 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="linear-gradient" x1="1212.63" y1="64" x2="469.5" y2="1351.13" gradientUnits="userSpaceOnUse">
-      <stop offset="0.2" stop-color="#67aac1"/>
-      <stop offset="1" stop-color="#353745"/>
+    <linearGradient id="linear-gradient" x1="361.16" y1="96.26" x2="361.16" y2="331.36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5c217"/>
+      <stop offset="0.99" stop-color="#ff7f2b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="834.81" y1="96.26" x2="834.81" y2="331.35" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2fa3e1"/>
+      <stop offset="0.99" stop-color="#1b75bb"/>
     </linearGradient>
   </defs>
-  <g id="hero">
-    <polygon id="bg2" points="1920 472.41 1050.57 472.41 1050.57 180.32 945.3 149.13 876.43 337.71 876.43 472.41 772.95 472.41 776.78 282.41 759.04 220.97 719.91 213.41 706.09 472.41 212.08 472.41 231.37 -29.57 0 -76.93 0 -36.14 0 436.49 0 505.02 0 1080.06 935.2 1080.06 945.55 1079.94 969.31 1080.06 1920 1080.06 1920 472.41" fill="url(#linear-gradient)"/>
+  <g id="herov2">
+    <g id="bg2">
+      <g id="eyeLeft">
+        <circle id="eyeL" cx="361.16" cy="213.81" r="117.55" fill="url(#linear-gradient)"/>
+        <path id="irisL" d="M317.38,213.12c0,46.4,43.78,84,43.78,84s43.77-37.61,43.77-84-44.05-82.64-43.77-82.64S317.38,166.72,317.38,213.12Z" fill="#212333"/>
+      </g>
+      <g id="eyeRight">
+        <circle id="eyeR" cx="834.81" cy="213.81" r="117.55" fill="url(#linear-gradient-2)"/>
+        <path id="irisR" d="M791,213.12c0,46.4,43.77,84,43.77,84s43.78-37.61,43.78-84-44.06-82.64-43.78-82.64S791,166.72,791,213.12Z" fill="#212333"/>
+      </g>
+    </g>
   </g>
 </svg>
