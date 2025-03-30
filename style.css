@@ -986,6 +986,27 @@ div[id*='banner-bg-'] {
     grid-area: span 2 / span 3 / span 2 / span 3;
 }
 
+#CVDtype:has(#redcvd:hover), #CVDtype:has(#redcvd:active){
+    filter: url('./emulator/filters.svg#protanopia');
+    -webkit-filter: url('./emulator/filters.svg#protanopia');
+    pointer-events: auto;
+}
+
+#CVDtype:has(#greencvd:hover), #CVDtype:has(#greencvd:active) {
+    filter: url('./emulator/filters.svg#deuteranopia');
+    -webkit-filter: url('./emulator/filters.svg#deuteranopia');
+    pointer-events: auto;
+}
+
+#CVDtype:has(#bluecvd:hover), #CVDtype:has(#bluecvd:active) {
+    filter: url('./emulator/filters.svg#tritanopia');
+    -webkit-filter: url('./emulator/filters.svg#tritanopia');
+    pointer-events: auto;
+}
+
+
+
+
 .CVDsim {
     display: flex;
 }
@@ -2171,6 +2192,10 @@ div[id*='banner-bg-'] {
 
     .suggest-img img, .suggest-img2 img {
         height: 20rem;
+    }
+
+    .scene4 {
+        width: 50vw;
     }
 }
     
